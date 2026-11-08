@@ -5,7 +5,7 @@ Website of the India Rural Development Fund (IRDF), a volunteer-run US 501(c)(3)
 Static site. No build step. GitHub Pages serves `main` from the root.
 
 - `index.html` — the whole site, one page.
-- `data/ledger.json` — raised and sent, by year, from IRS Form 990-EZ (ProPublica). Update once a year.
+- `data/ledger.json` — raised, sent and held by year, from IRS Form 990-EZ (ProPublica). Kept for reference; the page no longer shows it (board decision, Nov 2026).
 - `data/schools.json` — the five institutions and their counts, from rdfindia.org. Update once a year.
 - `img/` — Kalleda house photo and the link-preview card (`share.jpg`, 1200 × 630).
 

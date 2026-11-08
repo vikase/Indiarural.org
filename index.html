@@ -138,26 +138,16 @@ nav.main .btn{padding:.55rem .95rem;font-size:.9rem}
 /* money */
 .money-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(1.5rem,4vw,3rem);align-items:start}
 @media (max-width:860px){.money-grid{grid-template-columns:1fr}}
-.chart{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1rem .6rem;display:grid;gap:.6rem}
-.chart-top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:baseline}
-.chart h3{font-size:1rem}
-.legend{display:flex;gap:1rem;font-size:.8rem;color:var(--muted)}
-.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:.35rem;vertical-align:-1px}
-.chart svg{width:100%;height:auto;display:block;font-family:var(--body)}
-.chart .tip{font-size:.85rem;color:var(--muted);min-height:1.3em}
+.buys{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+@media (max-width:480px){.buys{grid-template-columns:1fr}}
+.buy{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;display:grid;gap:.3rem;align-content:start}
+.buy b{font-family:var(--display);font-weight:800;font-size:1.7rem;line-height:1;color:var(--leaf);letter-spacing:-.02em}
+.buy p{font-size:.92rem}
 .flow{display:grid;gap:.5rem}
 .flow .step{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem}
 .flow .step b{font-family:var(--display);font-weight:800;color:var(--leaf);font-size:1.1rem;line-height:1.2}
 .flow .step p{font-size:.92rem}
 .flow .arrow{text-align:center;color:var(--muted);font-size:.9rem;line-height:1}
-.ledger{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
-table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:520px}
-th,td{padding:.6rem .8rem;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
-th:first-child,td:first-child{text-align:left}
-th{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-tbody tr:last-child td{border-bottom:0}
-tfoot td{font-weight:700;border-top:2px solid var(--line)}
-.ledger-note{font-size:.85rem;color:var(--muted);max-width:70ch;margin-top:.7rem}
 
 /* give */
 #give{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -237,7 +227,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   <div class="stat"><b class="num">2,824</b><span>students this year, up from 80 in 1996</span></div>
   <div class="stat"><b class="num">5</b><span>institutions: four schools and a junior college</span></div>
   <div class="stat"><b class="num">246</b><span>teachers and staff, employed in the villages</span></div>
-  <div class="stat"><b class="num" id="stat-sent">$443k</b><span id="stat-sent-label">sent to the schools since 2013</span></div>
+  <div class="stat"><b class="num">0</b><span>paid staff at IRDF; every gift goes to the schools</span></div>
 </div></div>
 
 <section id="story"><div class="wrap">
@@ -278,27 +268,17 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
 <section id="money"><div class="wrap">
   <div class="sec-head">
     <p class="eyebrow">The money</p>
-    <h2>Every dollar, every year, in public.</h2>
-    <p class="lede">IRDF files a Form 990-EZ with the IRS each year. This is what those filings say. Gifts are saved up and sent to RDF as one grant every year or two, so the two lines move in steps; the gap between them is the balance waiting for the next grant.</p>
+    <h2>A dollar goes a long way in Kalleda.</h2>
+    <p class="lede">IRDF has no office, no salaries and no fundraising costs. What you give is what the schools get, less a card fee. Here is what it buys. <span class="todo">to confirm amounts with RDF</span></p>
   </div>
   <div class="money-grid">
-    <div>
-      <div class="chart" id="chart">
-        <div class="chart-top">
-          <h3>Raised in the US and sent to RDF, running totals since 2013</h3>
-          <div class="legend"><span><i style="background:var(--chart-raised)"></i>Raised</span><span><i style="background:var(--chart-sent)"></i>Sent to RDF</span></div>
-        </div>
-        <svg id="chart-svg" viewBox="0 0 640 300" role="img" aria-labelledby="chart-title"><title id="chart-title">Line chart of cumulative money raised and cumulative money sent to RDF, 2013 to 2025</title></svg>
-        <div class="tip" id="chart-tip">Tap a year for the figures.</div>
-      </div>
-      <div class="ledger" style="margin-top:1rem">
-        <table id="ledger">
-          <thead><tr><th>Year</th><th>Raised</th><th>Sent to RDF</th><th>Held at year end</th><th>IRS filing</th></tr></thead>
-          <tbody></tbody>
-          <tfoot></tfoot>
-        </table>
-      </div>
-      <p class="ledger-note">"Sent to RDF" is total expenses from the 990-EZ; nearly all of it is the grant, the rest is PayPal, bank and state filing fees of a few hundred dollars a year. "Held at year end" is the balance carried into the next year. In 2024, for example, IRDF raised <span class="num">$33,638</span>, held it, and sent <span class="num">$115,509</span> in 2025. The balance at the end of 2025, <span class="num">$84,830</span>, is for the next grant.</p>
+    <div class="buys">
+      <div class="buy"><b class="num">$25</b><p>A month of mid-day meals for one child: rice, dal and vegetables from the school garden.</p></div>
+      <div class="buy"><b class="num">$100</b><p>Books and two uniforms for a child for the year. The uniform is what erases caste and class in the classroom.</p></div>
+      <div class="buy"><b class="num">$250</b><p>One child's whole year: fees, meals, books and uniform.</p></div>
+      <div class="buy"><b class="num">$3,000</b><p>A teacher's salary for a year.</p></div>
+      <div class="buy"><b class="num">$10,000</b><p>A science lab, a library or a school bus.</p></div>
+      <div class="buy"><b class="num">$25,000</b><p>A new classroom block.</p></div>
     </div>
     <div class="flow" aria-label="How a gift travels">
       <div class="step"><b>1</b><p><strong>You give</strong> to IRDF by card, check, stock or employer match. IRDF sends your receipt; the gift is deductible on your US taxes.</p></div>
@@ -363,7 +343,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   </div>
   <div class="trust">
     <div><b>Tax-exempt</b>501(c)(3) public charity, ruling year 1998. EIN 94-3274500. Organized under California's Nonprofit Public Benefit Corporation Law.</div>
-    <div><b>Filings</b>Every Form 990 since 2000 on <a href="https://projects.propublica.org/nonprofits/organizations/943274500">ProPublica</a> and <a href="https://www.guidestar.org/Profile/94-3274500">Candid/GuideStar</a>.</div>
+    <div><b>Filings</b>IRDF files a Form 990-EZ every year. Every return since 2000 is on <a href="https://projects.propublica.org/nonprofits/organizations/943274500">ProPublica</a> and <a href="https://www.guidestar.org/Profile/94-3274500">Candid/GuideStar</a>.</div>
     <div><b>Partner</b><a href="https://www.rdfindia.org">Rural Development Foundation</a>, Hyderabad. Washington University in St. Louis ran its Village India program at the Kalleda junior college.</div>
     <div><b>Recognition</b>Resolution of the New Jersey General Assembly honoring IRDF. BBC coverage of the Kalleda students' photoblog, 2007.</div>
   </div>
@@ -409,70 +389,6 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
       </article>`).join('');
   }
 
-  /* ---------- ledger + chart ---------- */
-  function renderLedger(d){
-    const ys = d.years;
-    const tb = $('#ledger tbody'), tf = $('#ledger tfoot');
-    let r=0, s=0;
-    tb.innerHTML = ys.slice().reverse().map(y => {
-      r += y.raised; s += y.spent;
-      return `<tr><td>${y.year}</td><td class="num">${fmt(y.raised)}</td><td class="num">${fmt(y.spent)}</td><td class="num">${fmt(y.held)}</td><td><a href="${y.filing}">990-EZ</a></td></tr>`;
-    }).join('');
-    tf.innerHTML = `<tr><td>${ys[0].year}–${ys[ys.length-1].year}</td><td class="num">${fmt(r)}</td><td class="num">${fmt(s)}</td><td class="num">${fmt(ys[ys.length-1].held)}</td><td></td></tr>`;
-    $('#stat-sent').textContent = fmtK(s);
-    $('#stat-sent-label').textContent = `sent to the schools since ${ys[0].year}`;
-    drawChart(ys);
-  }
-
-  function drawChart(ys){
-    const svg = $('#chart-svg');
-    const W=640, H=300, padL=52, padR=56, padT=18, padB=34;
-    // running totals
-    let cr=0, cs=0;
-    const cum = ys.map(d => { cr += d.raised; cs += d.spent; return { year:d.year, raised:cr, spent:cs, held:d.held }; });
-    const max = cum[cum.length-1].raised;
-    const step = max > 300000 ? 100000 : 50000;
-    const top = Math.ceil(max/step)*step;
-    const n = ys.length;
-    const x = i => padL + i*((W-padL-padR)/(n-1));
-    const y = v => padT + (H-padT-padB) * (1 - v/top);
-    let out = '';
-    for(let v=0; v<=top; v+=step){
-      out += `<line x1="${padL}" x2="${W-padR}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="1"/>`;
-      out += `<text x="${padL-6}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${v===0?'0':'$'+(v/1000)+'k'}</text>`;
-    }
-    const pathOf = key => cum.map((d,i)=>`${i?'L':'M'}${x(i).toFixed(1)},${y(d[key]).toFixed(1)}`).join(' ');
-    // the gap between the two lines: balance held for the next grant
-    const band = cum.map((d,i)=>`${i?'L':'M'}${x(i).toFixed(1)},${y(d.raised).toFixed(1)}`).join(' ') +
-                 cum.slice().reverse().map((d,i)=>` L${x(n-1-i).toFixed(1)},${y(d.spent).toFixed(1)}`).join('') + ' Z';
-    out += `<path d="${band}" fill="var(--chart-raised)" opacity=".12"/>`;
-    out += `<path d="${pathOf('spent')}" fill="none" stroke="var(--chart-sent)" stroke-width="2.5" stroke-linejoin="round"/>`;
-    out += `<path d="${pathOf('raised')}" fill="none" stroke="var(--chart-raised)" stroke-width="2.5" stroke-linejoin="round"/>`;
-    cum.forEach((d,i)=>{
-      const xx = x(i);
-      out += `<text x="${xx}" y="${H-padB+16}" text-anchor="middle" font-size="11" fill="var(--muted)">${i%2===0 ? String(d.year).slice(2) : ''}</text>`;
-      out += `<line class="cursor" data-i="${i}" x1="${xx}" x2="${xx}" y1="${padT}" y2="${y(0)}" stroke="var(--fg)" stroke-width="1" opacity="0"/>`;
-      out += `<rect class="hit" data-i="${i}" x="${xx-(W-padL-padR)/(n-1)/2}" y="${padT}" width="${(W-padL-padR)/(n-1)}" height="${H-padT-padB}" fill="transparent" style="cursor:pointer"/>`;
-    });
-    const last = cum[n-1];
-    [['raised','var(--chart-raised)'],['spent','var(--chart-sent)']].forEach(([k,c])=>{
-      out += `<circle cx="${x(n-1)}" cy="${y(last[k])}" r="4.5" fill="${c}" stroke="var(--surface)" stroke-width="2"/>`;
-      out += `<text x="${x(n-1)+9}" y="${y(last[k])+4}" font-size="11" font-weight="600" fill="var(--fg)">${fmtK(last[k])}</text>`;
-    });
-    out += `<line x1="${padL}" x2="${W-padR}" y1="${y(0)}" y2="${y(0)}" stroke="var(--muted)" stroke-width="1"/>`;
-    svg.innerHTML = svg.innerHTML.replace(/<\/title>[\s\S]*$/, '</title>') + out;
-    const tip = $('#chart-tip');
-    const show = i => {
-      const c=cum[i], d=ys[i];
-      tip.innerHTML = `<b>${c.year}</b> · raised <b class="num">${fmt(d.raised)}</b>, sent <b class="num">${fmt(d.spent)}</b>, held at year end <b class="num">${fmt(d.held)}</b> · since 2013: raised <span class="num">${fmt(c.raised)}</span>, sent <span class="num">${fmt(c.spent)}</span>`;
-      svg.querySelectorAll('.cursor').forEach(l => l.setAttribute('opacity', +l.dataset.i===i ? '.35' : '0'));
-    };
-    svg.querySelectorAll('.hit').forEach(h=>{
-      h.addEventListener('mouseenter', ()=>show(+h.dataset.i));
-      h.addEventListener('click', ()=>show(+h.dataset.i));
-    });
-  }
-
   /* ---------- giver ---------- */
   const state = { amt: 100, monthly: false };
   const impactFor = a => {
@@ -506,12 +422,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   function selectIt(el){ const r=document.createRange(); r.selectNodeContents(el); const s=window.getSelection(); s.removeAllRanges(); s.addRange(r); }
 
   /* ---------- data ---------- */
-  const inline = window.IRDF_DATA;
-  if (inline) { renderSchools(inline.schools); renderLedger(inline.ledger); }
-  else {
-    fetch('data/schools.json').then(r=>r.json()).then(renderSchools).catch(()=>{ $('#schools-list').innerHTML='<p class="lede">School list could not be loaded.</p>'; });
-    fetch('data/ledger.json').then(r=>r.json()).then(renderLedger).catch(()=>{ $('#chart-tip').textContent='Figures could not be loaded.'; });
-  }
+  fetch('data/schools.json').then(r=>r.json()).then(renderSchools).catch(()=>{ $('#schools-list').innerHTML='<p class="lede">School list could not be loaded.</p>'; });
 })();
 </script>
 </body>
