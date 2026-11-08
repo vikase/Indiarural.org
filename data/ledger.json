@@ -1,20 +1,101 @@
 {
-  "note": "Figures from IRDF's Form 990-EZ filings as published by ProPublica Nonprofit Explorer (EIN 94-3274500). 'raised' is total revenue; 'spent' is total expenses, which is almost entirely grants to Rural Development Foundation plus small bank, PayPal and state filing fees. Update this file each year after the 990 is filed, or point the page at a Google Sheet kept by the treasurer.",
+  "note": "Figures from IRDF's Form 990-EZ filings as published by ProPublica Nonprofit Explorer (EIN 94-3274500). 'raised' is total revenue; 'spent' is total expenses; 'held' is net assets at year end, the balance kept for the next grant. Total expenses, which is almost entirely grants to Rural Development Foundation plus small bank, PayPal and state filing fees. Update this file each year after the 990 is filed, or point the page at a Google Sheet kept by the treasurer.",
   "source": "https://projects.propublica.org/nonprofits/organizations/943274500",
   "years": [
-    { "year": 2013, "raised": 92185, "spent": 104440, "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/201401059349200510/full" },
-    { "year": 2014, "raised": 10262, "spent": 9504,   "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/201511339349201501/full" },
-    { "year": 2015, "raised": 12127, "spent": 14110,  "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/201631199349200618/full" },
-    { "year": 2016, "raised": 22355, "spent": 9565,   "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/201731149349200218/full" },
-    { "year": 2017, "raised": 28102, "spent": 24821,  "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/201810959349200006/full" },
-    { "year": 2018, "raised": 53834, "spent": 54583,  "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/201921149349200902/full" },
-    { "year": 2019, "raised": 43675, "spent": 40056,  "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202012729349200031/full" },
-    { "year": 2020, "raised": 19549, "spent": 28843,  "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202200529349200305/full" },
-    { "year": 2021, "raised": 13222, "spent": 65,     "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202230529349201058/full" },
-    { "year": 2022, "raised": 12611, "spent": 291,    "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202342619349200404/full" },
-    { "year": 2023, "raised": 37491, "spent": 41041,  "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202401299349200015/full" },
-    { "year": 2024, "raised": 33638, "spent": 642,    "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202503189349207150/full" },
-    { "year": 2025, "raised": 136358, "spent": 115509, "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202601339349206555/full" }
+    {
+      "year": 2013,
+      "raised": 92185,
+      "spent": 104440,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/201401059349200510/full",
+      "held": 4387
+    },
+    {
+      "year": 2014,
+      "raised": 10262,
+      "spent": 9504,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/201511339349201501/full",
+      "held": 5145
+    },
+    {
+      "year": 2015,
+      "raised": 12127,
+      "spent": 14110,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/201631199349200618/full",
+      "held": 3086
+    },
+    {
+      "year": 2016,
+      "raised": 22355,
+      "spent": 9565,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/201731149349200218/full",
+      "held": 15876
+    },
+    {
+      "year": 2017,
+      "raised": 28102,
+      "spent": 24821,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/201810959349200006/full",
+      "held": 19157
+    },
+    {
+      "year": 2018,
+      "raised": 53834,
+      "spent": 54583,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/201921149349200902/full",
+      "held": 19645
+    },
+    {
+      "year": 2019,
+      "raised": 43675,
+      "spent": 40056,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202012729349200031/full",
+      "held": 23361
+    },
+    {
+      "year": 2020,
+      "raised": 19549,
+      "spent": 28843,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202200529349200305/full",
+      "held": 14067
+    },
+    {
+      "year": 2021,
+      "raised": 13222,
+      "spent": 65,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202230529349201058/full",
+      "held": 27375
+    },
+    {
+      "year": 2022,
+      "raised": 12611,
+      "spent": 291,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202342619349200404/full",
+      "held": 39504
+    },
+    {
+      "year": 2023,
+      "raised": 37491,
+      "spent": 41041,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202401299349200015/full",
+      "held": 36105
+    },
+    {
+      "year": 2024,
+      "raised": 33638,
+      "spent": 642,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202503189349207150/full",
+      "held": 57642
+    },
+    {
+      "year": 2025,
+      "raised": 136358,
+      "spent": 115509,
+      "filing": "https://projects.propublica.org/nonprofits/organizations/943274500/202601339349206555/full",
+      "held": 84830
+    }
   ],
-  "net_assets_latest": { "year": 2025, "amount": 84830 }
+  "net_assets_latest": {
+    "year": 2025,
+    "amount": 84830
+  }
 }
