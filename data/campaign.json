@@ -1,0 +1,15 @@
+{
+  "note": "Year-end campaign. Update 'raised' and 'donors' by hand (or from Zeffy) as gifts come in; the bar appears once raised > 0. Set 'active' to false after the campaign. 'donate_url' is the Zeffy or PayPal checkout link; 'signup_endpoint' is where the email signup posts (a Zeffy, Kit or Apps Script URL). Both empty means the page falls back to email.",
+  "active": true,
+  "title": "Fund 10 teachers for 2027",
+  "goal": 30000,
+  "raised": 0,
+  "donors": 0,
+  "unit_cost": 3000,
+  "unit": "teacher",
+  "starts": "2026-11-15",
+  "giving_tuesday": "2026-12-01",
+  "ends": "2026-12-31",
+  "donate_url": "",
+  "signup_endpoint": ""
+}

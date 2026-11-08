@@ -48,6 +48,7 @@
   --bougainvillea:#d672b5; --chart-raised:#cf5ca8; --chart-sent:#3fa36a; color-scheme:dark;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important;transition:none!important} }
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
@@ -181,6 +182,47 @@ nav.main .btn{padding:.55rem .95rem;font-size:.9rem}
 .trust div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;font-size:.92rem;display:grid;gap:.3rem}
 .trust div b{font-family:var(--display);font-weight:700}
 
+/* campaign */
+.camp{background:var(--laterite);color:var(--laterite-ink)}
+.camp .wrap{padding-block:.7rem;display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;align-items:center;justify-content:space-between}
+.camp b{font-family:var(--display);font-weight:800;font-size:1.05rem}
+.camp span{font-size:.9rem;opacity:.92}
+.camp a{color:inherit;font-family:var(--display);font-weight:700;white-space:nowrap}
+.goal{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;display:grid;gap:.6rem;margin-bottom:1.5rem}
+.goal-top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:baseline}
+.goal h3{font-size:1.25rem}
+.goal .meta{font-size:.9rem;color:var(--muted)}
+.bar{height:12px;border-radius:999px;background:var(--leaf-soft);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--laterite);border-radius:999px;transition:width .8s ease}
+.teachers{display:flex;gap:6px;flex-wrap:wrap}
+.teachers span{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:.7rem;font-weight:700;color:var(--muted)}
+.teachers span.on{background:var(--leaf);border-color:var(--leaf);color:var(--bg)}
+
+/* giver extras */
+.tribute{display:grid;gap:.5rem;font-size:.92rem}
+.tribute label.chk{display:flex;gap:.5rem;align-items:center;cursor:pointer}
+.tribute .fields{display:grid;grid-template-columns:auto 1fr;gap:.5rem}
+.tribute select,.tribute input[type=text],.signup input{font:inherit;color:var(--fg);background:var(--surface);border:1.5px solid var(--line);border-radius:8px;padding:.55rem .7rem;min-width:0}
+.matchnote{font-size:.88rem;background:var(--leaf-soft);border-radius:10px;padding:.7rem .8rem}
+.matchnote b{font-family:var(--display)}
+.amounts-hint{font-size:.8rem;color:var(--muted);margin-top:-.4rem}
+
+/* stories */
+.stories{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.storyc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.2rem;display:grid;gap:.6rem;align-content:start}
+.storyc .k{font-family:var(--display);font-weight:800;font-size:2rem;line-height:1;color:var(--bougainvillea);letter-spacing:-.02em}
+.storyc h3{font-size:1.1rem}
+.storyc p{font-size:.95rem}
+
+/* signup */
+#letters{background:var(--leaf-soft)}
+.signup-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:center}
+.signup-grid>*{min-width:0}
+@media (max-width:860px){.signup-grid{grid-template-columns:1fr}}
+.signup{display:grid;grid-template-columns:1fr 1fr auto;gap:.5rem}
+@media (max-width:560px){.signup{grid-template-columns:1fr}}
+.signup-msg{font-size:.9rem;min-height:1.3em;margin-top:.5rem}
+
 /* footer */
 footer{border-top:1px solid var(--line);padding-block:2.5rem;font-size:.9rem;color:var(--muted)}
 footer .wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
@@ -199,12 +241,17 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
 <header class="top"><div class="wrap">
   <a class="brand" href="#top"><b>India Rural Development Fund</b><span>IRDF · a US 501(c)(3) since 1996</span></a>
   <nav class="main" aria-label="Sections">
-    <a href="#story">Story</a><a href="#schools">Schools</a><a href="#money">Money</a><a href="#board">Board</a>
+    <a href="#story">Story</a><a href="#schools">Schools</a><a href="#money">What a gift buys</a><a href="#letters">Letters</a>
     <a class="btn" href="#give">Give</a>
   </nav>
 </div></header>
 
 <main id="top">
+
+<div class="camp" id="camp" hidden><div class="wrap">
+  <div><b id="camp-title">Fund 10 teachers for 2027</b> <span id="camp-meta"></span></div>
+  <a href="#give">Give before Dec 31 →</a>
+</div></div>
 
 <section class="hero"><div class="wrap hero-grid">
   <div class="hero-copy">
@@ -213,7 +260,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
     <p class="lede">In 1996, eighty children in Kalleda village started school with ten teachers. Today the Rural Development Foundation runs four schools and a junior college for <span class="mark num">2,824 students</span>, half of them girls. IRDF is the American charity that helps pay for it, with no paid staff and nothing taken off the top.</p>
     <div class="hero-cta">
       <a class="btn" href="#give">Give to the schools</a>
-      <a class="btn ghost" href="#money">See where the money went</a>
+      <a class="btn ghost" href="#money">See what a gift buys</a>
     </div>
     <p class="hero-fine">Tax-deductible in the US · EIN 94-3274500 · Every officer is a volunteer</p>
   </div>
@@ -265,6 +312,31 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   <div class="schools" id="schools-list"></div>
 </div></section>
 
+<section id="stories"><div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">What school does</p>
+    <h2>Three of the stories behind the numbers.</h2>
+    <p class="lede">2,824 children are in school this year. Here are three things that happened because they were. <span class="todo">to add: two current student stories with photos from RDF</span></p>
+  </div>
+  <div class="stories">
+    <article class="storyc">
+      <div class="k">2008</div>
+      <h3>From Kalleda to the Beijing Olympics</h3>
+      <p>Pranitta Vardhineni learned archery at the Kalleda school. In 2006 she won silver for India at the junior world championships in Mexico; in 2008 she shot for India at the Beijing Olympics. Her schoolmate Adonda Raju took bronze in Mexico.</p>
+    </article>
+    <article class="storyc">
+      <div class="k">1998</div>
+      <h3>A school under the trees</h3>
+      <p>Matendla had no school at all. RDF started classes outdoors, under the palm trees, before there was a building. Today it has 840 students, science and computer labs, a dining hall, a school bus and its own clean-water plant.</p>
+    </article>
+    <article class="storyc">
+      <div class="k">US</div>
+      <h3>A summer at an American high school</h3>
+      <p>RDF students have been chosen for the YES exchange program, spending a summer at a US high school. Two fourth-graders from Rollakal were selected for the state sports school at Hakimpet in 2019.</p>
+    </article>
+  </div>
+</div></section>
+
 <section id="money"><div class="wrap">
   <div class="sec-head">
     <p class="eyebrow">The money</p>
@@ -298,22 +370,32 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
     <h2>Pay a teacher. Feed a class. Keep a girl in school.</h2>
     <p class="lede">Every gift goes to the schools. Pick an amount, or give the way your accountant prefers.</p>
   </div>
+  <div class="goal" id="goal" hidden>
+    <div class="goal-top"><h3 id="goal-title">Fund 10 teachers for 2027</h3><span class="meta" id="goal-meta"></span></div>
+    <div class="bar" id="goal-bar" hidden><i id="goal-fill"></i></div>
+    <div class="teachers" id="goal-teachers" aria-label="Teachers funded so far"></div>
+    <p class="meta" id="goal-note">$3,000 pays one teacher for a school year. A monthly gift of $250 funds a teacher on its own.</p>
+  </div>
   <div class="give-grid">
     <div class="giver" id="giver">
       <div class="seg" role="group" aria-label="Gift frequency">
-        <button type="button" id="freq-once" aria-pressed="true">One time</button>
-        <button type="button" id="freq-monthly" aria-pressed="false">Monthly</button>
+        <button type="button" id="freq-monthly" aria-pressed="true">Monthly</button>
+        <button type="button" id="freq-once" aria-pressed="false">One time</button>
       </div>
-      <div class="amounts" role="group" aria-label="Amount">
-        <button type="button" data-amt="50">$50</button>
-        <button type="button" data-amt="100" aria-pressed="true">$100</button>
-        <button type="button" data-amt="250">$250</button>
-        <button type="button" data-amt="1000">$1,000</button>
-      </div>
+      <div class="amounts" role="group" aria-label="Amount" id="amounts"></div>
+      <p class="amounts-hint" id="amounts-hint">Monthly gifts let the schools plan a whole year of salaries. Cancel any time.</p>
       <label class="custom"><span>$</span><input id="custom-amt" type="number" min="1" step="1" inputmode="numeric" placeholder="Other amount" aria-label="Other amount"></label>
       <div class="impact" id="impact"></div>
-      <a class="btn" id="give-btn" href="#give" aria-describedby="give-note">Give $100 by card or PayPal</a>
-      <p class="hero-fine" id="give-note">Opens IRDF's PayPal checkout. PayPal keeps 2.9% + 30¢; everything else reaches the schools. <span class="todo">to confirm: button link and fee</span></p>
+      <div class="tribute">
+        <label class="chk"><input type="checkbox" id="trib-on"> Give in honor or in memory of someone</label>
+        <div class="fields" id="trib-fields" hidden>
+          <select id="trib-kind" aria-label="Honor or memory"><option>In honor of</option><option>In memory of</option></select>
+          <input type="text" id="trib-name" placeholder="Their name" aria-label="Their name">
+        </div>
+      </div>
+      <a class="btn" id="give-btn" href="#give" aria-describedby="give-note">Give</a>
+      <div class="matchnote"><b>Double it.</b> Many employers, including most large tech companies and banks, match their employees' gifts. After you give, search your company's giving portal (Benevity, YourCause, Bright Funds) for <strong>India Rural Development Fund</strong> or EIN 94-3274500.</div>
+      <p class="hero-fine" id="give-note">Secure checkout. You get a tax receipt by email. <span class="todo">to confirm: checkout link (Zeffy or PayPal)</span></p>
     </div>
     <div class="ways">
       <div class="way"><div class="k">Check</div><div><p>Payable to <strong>India Rural Development Fund</strong>. Include your email so we can send a receipt.</p>
@@ -347,6 +429,22 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
     <div><b>Partner</b><a href="https://www.rdfindia.org">Rural Development Foundation</a>, Hyderabad. Washington University in St. Louis ran its Village India program at the Kalleda junior college.</div>
     <div><b>Recognition</b>Resolution of the New Jersey General Assembly honoring IRDF. BBC coverage of the Kalleda students' photoblog, 2007.</div>
   </div>
+</div></section>
+
+<section id="letters"><div class="wrap signup-grid">
+  <div class="sec-head" style="margin:0">
+    <p class="eyebrow">Letters from Kalleda</p>
+    <h2>Four short letters a year from the schools.</h2>
+    <p class="lede" style="color:var(--fg)">A student's story, a photo from the classroom, and what your gifts paid for that term. No spam, and one click to leave.</p>
+  </div>
+  <form id="signup-form" novalidate>
+    <div class="signup">
+      <input id="su-name" type="text" placeholder="First name" aria-label="First name" autocomplete="given-name">
+      <input id="su-email" type="email" placeholder="Email" aria-label="Email" autocomplete="email" required>
+      <button class="btn" type="submit">Sign up</button>
+    </div>
+    <p class="signup-msg" id="su-msg" role="status"></p>
+  </form>
 </div></section>
 
 </main>
@@ -390,27 +488,96 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   }
 
   /* ---------- giver ---------- */
-  const state = { amt: 100, monthly: false };
-  const impactFor = a => {
-    // Rough equivalents. To confirm with RDF: per-student annual cost and teacher salary.
-    if (a >= 1000) return ['A year of school for about ' + Math.round(a/250) + ' children', 'fees, meals, books and uniforms'];
-    if (a >= 250)  return ['A full year for one child', 'fees, meals, books and uniforms'];
-    if (a >= 100)  return ['A term of mid-day meals for a class', 'rice, dal and vegetables from the school garden'];
-    return ['Books and a uniform for one child', 'the uniform is what erases caste and class in the classroom'];
+  const SETS = { monthly:[25,50,100,250], once:[100,250,500,1000] };
+  const DEFAULTS = { monthly:50, once:250 };
+  const state = { monthly:true, amt:50, donateUrl:'' };
+  const impactFor = (a, monthly) => {
+    // Rough equivalents. To confirm with RDF: teacher salary, per-child year, meals.
+    const yr = monthly ? a*12 : a;
+    if (yr >= 3000) return [`${Math.floor(yr/3000) > 1 ? Math.floor(yr/3000)+' teachers' : 'A teacher'} for a whole school year`, monthly ? `${fmt(yr)} over twelve months` : 'salary for one teacher in a village school'];
+    if (yr >= 250)  return [`${Math.floor(yr/250) > 1 ? 'A year of school for '+Math.floor(yr/250)+' children' : "One child's whole school year"}`, 'fees, mid-day meals, books and uniform'];
+    if (yr >= 100)  return ['Books and two uniforms for a child', 'the uniform is what erases caste and class in the classroom'];
+    return [`${Math.max(1,Math.round(yr/25))} month${yr>=50?'s':''} of mid-day meals for a child`, 'rice, dal and vegetables from the school garden'];
   };
+  function renderAmounts(){
+    const set = SETS[state.monthly?'monthly':'once'];
+    $('#amounts').innerHTML = set.map(v=>`<button type="button" data-amt="${v}">$${v.toLocaleString('en-US')}</button>`).join('');
+    $('#amounts').querySelectorAll('button').forEach(b => b.addEventListener('click', ()=>{ state.amt=+b.dataset.amt; $('#custom-amt').value=''; paint(); }));
+    $('#amounts-hint').hidden = !state.monthly;
+  }
   function paint(){
     const a = state.amt;
-    const [big, small] = impactFor(state.monthly ? a*12 : a);
+    const [big, small] = impactFor(a, state.monthly);
     $('#impact').innerHTML = `<b>${big}</b><span>${small} <span class="todo">to confirm equivalents with RDF</span></span>`;
-    $('#give-btn').textContent = `Give ${fmt(a)}${state.monthly?' a month':''} by card or PayPal`;
-    document.querySelectorAll('.amounts button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.amt===a && !$('#custom-amt').value)));
+    const trib = $('#trib-on').checked && $('#trib-name').value.trim() ? ` ${$('#trib-kind').value.toLowerCase()} ${$('#trib-name').value.trim()}` : '';
+    $('#give-btn').textContent = `Give ${fmt(a)}${state.monthly?' a month':''}${trib}`;
+    $('#amounts').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.amt===a && !$('#custom-amt').value)));
   }
-  document.querySelectorAll('.amounts button').forEach(b => b.addEventListener('click', ()=>{ state.amt=+b.dataset.amt; $('#custom-amt').value=''; paint(); }));
+  function setFreq(monthly){
+    state.monthly = monthly; state.amt = DEFAULTS[monthly?'monthly':'once']; $('#custom-amt').value='';
+    $('#freq-monthly').setAttribute('aria-pressed', String(monthly)); $('#freq-once').setAttribute('aria-pressed', String(!monthly));
+    renderAmounts(); paint();
+  }
+  $('#freq-monthly').addEventListener('click', ()=>setFreq(true));
+  $('#freq-once').addEventListener('click', ()=>setFreq(false));
   $('#custom-amt').addEventListener('input', e => { const v=+e.target.value; if(v>0){ state.amt=v; } paint(); });
-  $('#freq-once').addEventListener('click', ()=>{ state.monthly=false; $('#freq-once').setAttribute('aria-pressed','true'); $('#freq-monthly').setAttribute('aria-pressed','false'); paint(); });
-  $('#freq-monthly').addEventListener('click', ()=>{ state.monthly=true; $('#freq-once').setAttribute('aria-pressed','false'); $('#freq-monthly').setAttribute('aria-pressed','true'); paint(); });
-  $('#give-btn').addEventListener('click', e => { e.preventDefault(); $('#give-note').innerHTML = 'This button will open PayPal checkout once IRDF\'s button link is added. For now, use one of the other ways on the right. <span class="todo">to confirm</span>'; });
-  paint();
+  $('#trib-on').addEventListener('change', e => { $('#trib-fields').hidden = !e.target.checked; paint(); });
+  $('#trib-kind').addEventListener('change', paint);
+  $('#trib-name').addEventListener('input', paint);
+  $('#give-btn').addEventListener('click', e => {
+    if (state.donateUrl) {
+      const u = new URL(state.donateUrl);
+      u.searchParams.set('amount', state.amt);
+      if (state.monthly) u.searchParams.set('recurring', 'monthly');
+      $('#give-btn').href = u.toString(); $('#give-btn').target = '_blank'; $('#give-btn').rel = 'noopener';
+      return;
+    }
+    e.preventDefault();
+    $('#give-note').innerHTML = 'Online checkout goes live once IRDF\'s Zeffy or PayPal link is added. Until then, give by check or employer match, or email info@indiarural.org. <span class="todo">to confirm</span>';
+  });
+  renderAmounts(); paint();
+
+  /* ---------- campaign ---------- */
+  function renderCampaign(c){
+    if (!c || !c.active) return;
+    state.donateUrl = c.donate_url || '';
+    state.signup = c.signup_endpoint || '';
+    const end = new Date(c.ends + 'T23:59:59');
+    const days = Math.ceil((end - new Date()) / 86400000);
+    if (days < 0) return;
+    const units = Math.floor((c.raised||0) / c.unit_cost);
+    const target = Math.round(c.goal / c.unit_cost);
+    const gt = new Date(c.giving_tuesday + 'T23:59:59');
+    const gtDays = Math.ceil((gt - new Date()) / 86400000);
+    const when = gtDays > 0 ? `Giving Tuesday is Dec 1 · ${days} days to Dec 31` : `${days} day${days===1?'':'s'} left`;
+    const progress = c.raised > 0 ? `${fmt(c.raised)} of ${fmt(c.goal)} from ${c.donors} donor${c.donors===1?'':'s'} · ` : `Goal ${fmt(c.goal)} · `;
+    $('#camp-title').textContent = c.title;
+    $('#camp-meta').textContent = progress + when;
+    $('#camp').hidden = false;
+    $('#goal-title').textContent = c.title;
+    $('#goal-meta').textContent = progress + when;
+    if (c.raised > 0) { $('#goal-bar').hidden = false; requestAnimationFrame(()=>{ $('#goal-fill').style.width = Math.min(100, c.raised/c.goal*100) + '%'; }); }
+    $('#goal-teachers').innerHTML = Array.from({length:target}, (_,i)=>`<span class="${i<units?'on':''}" title="Teacher ${i+1}">${i+1}</span>`).join('');
+    $('#goal').hidden = false;
+  }
+
+  /* ---------- email signup ---------- */
+  $('#signup-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const email = $('#su-email').value.trim(), name = $('#su-name').value.trim();
+    const msg = $('#su-msg');
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = 'Please enter a valid email address.'; return; }
+    if (state.signup) {
+      fetch(state.signup, { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain'}, body: JSON.stringify({ kind:'signup', name, email, page: location.href }) })
+        .then(()=>{ msg.textContent = `Thank you${name?', '+name:''}. The first letter comes after the next school term.`; e.target.reset(); })
+        .catch(()=>{ msg.textContent = 'That did not go through. Please email info@indiarural.org and we will add you.'; });
+    } else {
+      const sub = encodeURIComponent('Sign me up for Letters from Kalleda');
+      const body = encodeURIComponent(`Please add me to the IRDF mailing list.\n\nName: ${name}\nEmail: ${email}`);
+      location.href = `mailto:info@indiarural.org?subject=${sub}&body=${body}`;
+      msg.textContent = 'Your email app should open with a short note to IRDF. Send it and we will add you.';
+    }
+  });
 
   /* ---------- copy buttons ---------- */
   document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', ()=>{
@@ -423,6 +590,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
 
   /* ---------- data ---------- */
   fetch('data/schools.json').then(r=>r.json()).then(renderSchools).catch(()=>{ $('#schools-list').innerHTML='<p class="lede">School list could not be loaded.</p>'; });
+  fetch('data/campaign.json', {cache:'no-store'}).then(r=>r.json()).then(renderCampaign).catch(()=>{});
 })();
 </script>
 </body>
