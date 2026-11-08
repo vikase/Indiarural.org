@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>India Rural Development Fund</title>
+<meta name="description" content="IRDF is a volunteer-run US 501(c)(3) that funds the Rural Development Foundation's five schools in rural Telangana, India. 2,824 students, no paid staff.">
+<meta property="og:title" content="India Rural Development Fund">
+<meta property="og:description" content="Quality schooling for 2,800 children in rural Telangana, since 1996. A volunteer-run US charity with no paid staff.">
+<meta property="og:image" content="https://indiarural.org/img/share.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Albert+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+Telugu:wght@500&display=swap">
+<style>
+/* Layout: one long page, a sticky nav rail, whitewash ground with laterite and tamarind.
+   Palette comes from the Kalleda house photo: chuna whitewash, red-oxide window hoods,
+   tamarind leaf, the laterite yard, one bougainvillea. */
+:root{
+  --bg:#f6f7f4;           /* whitewash */
+  --surface:#ffffff;
+  --fg:#17221c;           /* tamarind night */
+  --muted:#5c6a62;
+  --line:#d9ded8;
+  --laterite:#a9311f;     /* red oxide: the one call to action */
+  --laterite-ink:#ffffff;
+  --leaf:#1f7a4d;         /* tamarind leaf: structure, links */
+  --leaf-soft:#e3efe7;
+  --bougainvillea:#b5308a;/* one highlight */
+  --chart-raised:#b5308a;
+  --chart-sent:#1f7a4d;
+  --display:"Bricolage Grotesque", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body:"Albert Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --telugu:"Noto Sans Telugu", "Gautami", sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15201a; --surface:#1d2a23; --fg:#e9ece6; --muted:#a3b0a8; --line:#2f3d35;
+    --laterite:#d9553f; --laterite-ink:#17110f; --leaf:#5fbf86; --leaf-soft:#223a2c;
+    --bougainvillea:#d672b5; --chart-raised:#cf5ca8; --chart-sent:#3fa36a; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15201a; --surface:#1d2a23; --fg:#e9ece6; --muted:#a3b0a8; --line:#2f3d35;
+  --laterite:#d9553f; --laterite-ink:#17110f; --leaf:#5fbf86; --leaf-soft:#223a2c;
+  --bougainvillea:#d672b5; --chart-raised:#cf5ca8; --chart-sent:#3fa36a; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important;transition:none!important} }
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:var(--leaf);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--fg)}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,7vw,4.6rem);font-weight:800;font-variation-settings:"opsz" 96}
+h2{font-size:clamp(1.7rem,4.2vw,2.6rem);font-weight:700}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+.wrap{max-width:1080px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;color:var(--leaf)}
+.lede{font-size:1.15rem;max-width:62ch;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--display);font-weight:700;font-size:1rem;padding:.8rem 1.25rem;border-radius:999px;border:1.5px solid var(--laterite);background:var(--laterite);color:var(--laterite-ink);text-decoration:none;cursor:pointer;line-height:1}
+.btn:hover{filter:brightness(1.08);color:var(--laterite-ink)}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--fg);color:var(--fg)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--bougainvillea);outline-offset:3px}
+section{padding-block:clamp(2.5rem,7vw,5.5rem)}
+.sec-head{display:grid;gap:.6rem;margin-bottom:clamp(1.5rem,4vw,2.5rem);max-width:70ch}
+.todo{display:inline-block;font-size:.72rem;color:var(--bougainvillea);border:1px dashed var(--bougainvillea);border-radius:4px;padding:0 .35rem;vertical-align:middle;white-space:nowrap}
+
+/* review strip (remove before launch) */
+.review{background:var(--leaf-soft);color:var(--fg);font-size:.82rem;border-bottom:1px solid var(--line)}
+.review .wrap{padding-block:.45rem;display:flex;flex-wrap:wrap;gap:.3rem 1rem;align-items:center}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in oklab,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.7rem}
+.brand{display:flex;flex-direction:column;line-height:1.05;text-decoration:none;color:var(--fg)}
+.brand b{font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:-.01em}
+.brand span{font-size:.72rem;color:var(--muted)}
+nav.main{display:flex;gap:1.1rem;align-items:center}
+nav.main a{font-family:var(--display);font-weight:700;font-size:.9rem;text-decoration:none;color:var(--fg)}
+nav.main a:hover{color:var(--leaf)}
+nav.main .btn{padding:.55rem .95rem;font-size:.9rem}
+@media (max-width:720px){ nav.main a:not(.btn){display:none} }
+
+/* hero */
+.hero{padding-block:clamp(1.5rem,4vw,3rem) 0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,4vw,3rem);align-items:end}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}}
+.hero-copy{display:grid;gap:1.2rem;padding-bottom:1rem}
+.hero-copy .lede{color:var(--fg)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
+.hero-fine{font-size:.85rem;color:var(--muted)}
+.hero-photo{position:relative;border-radius:14px 14px 0 0;overflow:hidden;background:var(--surface);aspect-ratio:1400/957;max-width:100%}
+.hero-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.hero-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:.7rem .9rem;font-size:.8rem;color:#fff;background:linear-gradient(transparent,rgba(20,32,26,.75));display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+.hero-photo figcaption .te{font-family:var(--telugu);font-size:1.05rem}
+.mark{color:var(--bougainvillea)}
+
+/* number band */
+.band{background:var(--fg);color:var(--bg)}
+:root[data-theme="dark"] .band,:root:not([data-theme="light"]) .band{--band-bg:var(--surface)}
+.band .wrap{padding-block:1.4rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media (max-width:720px){.band .wrap{grid-template-columns:repeat(2,1fr)}}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1;letter-spacing:-.02em}
+.stat span{display:block;font-size:.82rem;opacity:.8;margin-top:.3rem}
+
+/* story */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3.5rem)}
+@media (max-width:860px){.story-grid{grid-template-columns:1fr}}
+.prose{display:grid;gap:1rem;max-width:62ch}
+.prose p{font-size:1.05rem}
+.timeline{list-style:none;margin:0;padding:0;display:grid;gap:0;border-left:2px solid var(--line);margin-left:.4rem}
+.timeline li{position:relative;padding:.1rem 0 1.1rem 1.4rem}
+.timeline li::before{content:"";position:absolute;left:-7px;top:.45rem;width:12px;height:12px;border-radius:50%;background:var(--leaf);border:2px solid var(--bg)}
+.timeline li b{font-family:var(--display);font-weight:800;font-size:1rem;display:block;color:var(--leaf);letter-spacing:.02em}
+.timeline li span{font-size:.95rem}
+.quote{border-left:3px solid var(--bougainvillea);padding:.2rem 0 .2rem 1rem;font-size:1.05rem;font-style:italic}
+.quote cite{display:block;font-style:normal;font-size:.85rem;color:var(--muted);margin-top:.4rem}
+
+/* schools */
+.schools{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.school{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;display:grid;gap:.6rem;align-content:start}
+.school h3{font-size:1.15rem}
+.school .where{font-size:.82rem;color:var(--muted)}
+.school .where .te{font-family:var(--telugu)}
+.school dl{display:grid;grid-template-columns:auto 1fr;gap:.1rem .7rem;margin:0;font-size:.9rem}
+.school dt{color:var(--muted)}
+.school dd{margin:0;font-weight:600}
+.school p{font-size:.95rem}
+
+/* money */
+.money-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(1.5rem,4vw,3rem);align-items:start}
+@media (max-width:860px){.money-grid{grid-template-columns:1fr}}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1rem .6rem;display:grid;gap:.6rem}
+.chart-top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:baseline}
+.chart h3{font-size:1rem}
+.legend{display:flex;gap:1rem;font-size:.8rem;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:.35rem;vertical-align:-1px}
+.chart svg{width:100%;height:auto;display:block;font-family:var(--body)}
+.chart .tip{font-size:.85rem;color:var(--muted);min-height:1.3em}
+.flow{display:grid;gap:.5rem}
+.flow .step{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem}
+.flow .step b{font-family:var(--display);font-weight:800;color:var(--leaf);font-size:1.1rem;line-height:1.2}
+.flow .step p{font-size:.92rem}
+.flow .arrow{text-align:center;color:var(--muted);font-size:.9rem;line-height:1}
+.ledger{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:520px}
+th,td{padding:.6rem .8rem;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+tbody tr:last-child td{border-bottom:0}
+tfoot td{font-weight:700;border-top:2px solid var(--line)}
+.ledger-note{font-size:.85rem;color:var(--muted);max-width:70ch;margin-top:.7rem}
+
+/* give */
+#give{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.give-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:start}
+@media (max-width:860px){.give-grid{grid-template-columns:1fr}}
+.giver{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:1.2rem;display:grid;gap:1rem}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface);width:max-content;max-width:100%}
+.seg button{border:0;background:transparent;color:var(--fg);font:inherit;font-family:var(--display);font-weight:700;padding:.45rem .9rem;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.amounts{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem}
+.amounts button{border:1.5px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;font-family:var(--display);font-weight:800;font-size:1.1rem;padding:.75rem .3rem;border-radius:10px;cursor:pointer;font-variant-numeric:tabular-nums}
+.amounts button[aria-pressed="true"]{border-color:var(--laterite);background:var(--laterite);color:var(--laterite-ink)}
+.custom{display:flex;align-items:center;gap:.5rem;border:1.5px solid var(--line);border-radius:10px;padding:.2rem .8rem;background:var(--surface)}
+.custom input{border:0;background:transparent;color:var(--fg);font:inherit;font-family:var(--display);font-weight:800;font-size:1.1rem;width:100%;min-width:0;padding:.5rem 0;outline:none}
+.custom span{font-family:var(--display);font-weight:800;color:var(--muted)}
+.impact{font-size:.95rem;display:grid;gap:.3rem}
+.impact b{font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--leaf)}
+.ways{display:grid;gap:.8rem}
+.way{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;padding:.9rem 0;border-top:1px solid var(--line)}
+.way:first-child{border-top:0;padding-top:0}
+.way .k{font-family:var(--display);font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);padding-top:.25rem;width:5.2rem}
+.way p{font-size:.95rem}
+.way .addr{font-family:var(--body);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.5rem .7rem;font-size:.9rem;display:inline-block;margin-top:.3rem;user-select:all}
+.copy{font:inherit;font-size:.78rem;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:6px;padding:.2rem .5rem;cursor:pointer;margin-left:.4rem}
+
+/* board */
+.board{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.8rem 1.5rem}
+.person b{display:block;font-family:var(--display);font-weight:700;font-size:1.05rem}
+.person span{font-size:.85rem;color:var(--muted)}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
+.trust div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;font-size:.92rem;display:grid;gap:.3rem}
+.trust div b{font-family:var(--display);font-weight:700}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding-block:2.5rem;font-size:.9rem;color:var(--muted)}
+footer .wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media (max-width:720px){footer .wrap{grid-template-columns:1fr}}
+footer b{color:var(--fg);font-family:var(--display)}
+footer .te{font-family:var(--telugu);color:var(--fg)}
+</style>
+</head>
+<body>
+
+<div class="review"><div class="wrap">
+  <b>Prototype v1 for board review.</b>
+  <span>Figures come from IRS filings and rdfindia.org. Items marked <span class="todo">to confirm</span> need a check before launch. This strip goes away at launch.</span>
+</div></div>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="#top"><b>India Rural Development Fund</b><span>IRDF · a US 501(c)(3) since 1996</span></a>
+  <nav class="main" aria-label="Sections">
+    <a href="#story">Story</a><a href="#schools">Schools</a><a href="#money">Money</a><a href="#board">Board</a>
+    <a class="btn" href="#give">Give</a>
+  </nav>
+</div></header>
+
+<main id="top">
+
+<section class="hero"><div class="wrap hero-grid">
+  <div class="hero-copy">
+    <p class="eyebrow">Kalleda, Warangal district, Telangana</p>
+    <h1>A school that began in a family's front room.</h1>
+    <p class="lede">In 1996, eighty village children sat down to class in a portion of the Erraballi family home in Kalleda. Today the Rural Development Foundation runs four schools and a junior college for <span class="mark num">2,824 students</span>. IRDF is the American charity that helps pay for it, with no paid staff and nothing taken off the top.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#give">Give to the schools</a>
+      <a class="btn ghost" href="#money">See where the money went</a>
+    </div>
+    <p class="hero-fine">Tax-deductible in the US · EIN 94-3274500 · Every officer is a volunteer</p>
+  </div>
+  <figure class="hero-photo">
+    <img src="img/kalleda.jpg" srcset="img/kalleda-800.jpg 800w, img/kalleda.jpg 1400w" sizes="(max-width:860px) 100vw, 50vw" alt="The whitewashed Erraballi family house in Kalleda, now the Kalleda Rural School, seen through a tamarind tree with a bougainvillea in bloom and a playground slide in the yard" width="1400" height="957">
+    <figcaption><span>The Kalleda house, 1996 to today</span><span class="te">కల్లెడ</span></figcaption>
+  </figure>
+</div></section>
+
+<div class="band"><div class="wrap">
+  <div class="stat"><b class="num">2,824</b><span>students this year, up from 80 in 1996</span></div>
+  <div class="stat"><b class="num">5</b><span>institutions: four schools and a junior college</span></div>
+  <div class="stat"><b class="num">246</b><span>teachers and staff, employed in the villages</span></div>
+  <div class="stat"><b class="num" id="stat-sent">$443k</b><span id="stat-sent-label">sent to the schools since 2013</span></div>
+</div></div>
+
+<section id="story"><div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">The story</p>
+    <h2>Thirty years, one village at a time.</h2>
+  </div>
+  <div class="story-grid">
+    <div class="prose">
+      <p>The Rural Development Foundation (RDF) was founded in Hyderabad in 1996 by the Erraballi family to bring a good school to their own village. The same year, family and friends in California chartered the India Rural Development Fund so that Americans could give to it with a US tax deduction.</p>
+      <p>The model has not changed. RDF runs the schools: hires the teachers, cooks the mid-day meal, keeps half the seats for girls, and admits by lottery so every caste and community in the village is represented. IRDF raises money in the United States and sends it as grants. All of IRDF's officers volunteer, so the only costs are bank fees and state filings.</p>
+      <p>The schools are not charity schools in the usual sense. Families pay modest fees where they can, about one in ten students gets a concession, and the schools compete and win against the best in the district in archery, athletics, kabaddi and science fairs. Alumni have represented India at the junior world championships and the Olympics.</p>
+      <blockquote class="quote">I have been working in developing countries for 25 years and have never before encountered an organization so deserving of support.<cite>Glenn Davis Stone, anthropologist, Washington University in St. Louis, who founded the Village India program at the Kalleda junior college</cite></blockquote>
+    </div>
+    <ol class="timeline">
+      <li><b>1996</b><span>Kalleda Rural School opens with 80 children in the family home. IRDF is chartered in California.</span></li>
+      <li><b>1998</b><span>Matendla school starts under the trees in Siddipet district, a village with no school.</span></li>
+      <li><b>2003</b><span>Kalleda reaches 560 students, kindergarten to 10th. Community hall opens in Redlawada.</span></li>
+      <li><b>2004</b><span>First graduating class. Every student passes the state board exam.</span></li>
+      <li><b>2006</b><span>Pranitta Vardhineni and Adonda Raju win silver and bronze for India at the junior world archery championship in Mexico.</span></li>
+      <li><b>2007</b><span>The BBC's most-read Asia story is the Kalleda kids' photoblog. The junior college opens. Washington University begins Village India.</span></li>
+      <li><b>2008</b><span>Pranitta shoots for India at the Beijing Olympics.</span></li>
+      <li><b>2013</b><span>Rollakal gets a building, funded and painted by Infor employees.</span></li>
+      <li><b>2026</b><span>2,824 students, 246 staff, five institutions.</span></li>
+    </ol>
+  </div>
+</div></section>
+
+<section id="schools"><div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">The schools</p>
+    <h2>Five institutions in three districts.</h2>
+    <p class="lede">All run by RDF from Hyderabad with local village committees. Counts are for the 2025–26 year.</p>
+  </div>
+  <div class="schools" id="schools-list"></div>
+</div></section>
+
+<section id="money"><div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">The money</p>
+    <h2>Every dollar, every year, in public.</h2>
+    <p class="lede">IRDF files a Form 990-EZ with the IRS each year. This is what those filings say. The live site will read the latest filing automatically and show the treasurer's grant ledger line by line.</p>
+  </div>
+  <div class="money-grid">
+    <div>
+      <div class="chart" id="chart">
+        <div class="chart-top">
+          <h3>Raised in the US and sent to RDF, by year</h3>
+          <div class="legend"><span><i style="background:var(--chart-raised)"></i>Raised</span><span><i style="background:var(--chart-sent)"></i>Sent to RDF</span></div>
+        </div>
+        <svg id="chart-svg" viewBox="0 0 640 300" role="img" aria-labelledby="chart-title"><title id="chart-title">Bar chart of money raised and sent to RDF each year, 2013 to 2025</title></svg>
+        <div class="tip" id="chart-tip">Tap a year for the figures.</div>
+      </div>
+      <div class="ledger" style="margin-top:1rem">
+        <table id="ledger">
+          <thead><tr><th>Year</th><th>Raised</th><th>Sent to RDF</th><th>IRS filing</th></tr></thead>
+          <tbody></tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+      <p class="ledger-note">"Sent to RDF" is total expenses from the 990-EZ; nearly all of it is the grant, the rest is PayPal, bank and state filing fees of a few hundred dollars a year. Money raised late in a year is sent the next year, which is why some years show more in than out. Net assets at the end of 2025 were <span class="num">$84,830</span>, held for the next grant.</p>
+    </div>
+    <div class="flow" aria-label="How a gift travels">
+      <div class="step"><b>1</b><p><strong>You give</strong> to IRDF by card, check, stock or employer match. IRDF sends your receipt; the gift is deductible on your US taxes.</p></div>
+      <div class="arrow">↓</div>
+      <div class="step"><b>2</b><p><strong>IRDF grants</strong> the money to Rural Development Foundation, Hyderabad, which is registered to receive foreign funds under India's FCRA. <span class="todo">to confirm</span></p></div>
+      <div class="arrow">↓</div>
+      <div class="step"><b>3</b><p><strong>RDF spends it</strong> on teachers' salaries, mid-day meals, books and uniforms, and buildings. Its own audited accounts are on <a href="https://www.rdfindia.org/archives">rdfindia.org</a>.</p></div>
+      <div class="arrow">↓</div>
+      <div class="step"><b>4</b><p><strong>Children go to school</strong> in Kalleda, Matendla, Redlawada and Rollakal. Half of them are girls.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="give"><div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">Give</p>
+    <h2>Pay a teacher. Feed a class. Keep a girl in school.</h2>
+    <p class="lede">Every gift goes to the schools. Pick an amount, or give the way your accountant prefers.</p>
+  </div>
+  <div class="give-grid">
+    <div class="giver" id="giver">
+      <div class="seg" role="group" aria-label="Gift frequency">
+        <button type="button" id="freq-once" aria-pressed="true">One time</button>
+        <button type="button" id="freq-monthly" aria-pressed="false">Monthly</button>
+      </div>
+      <div class="amounts" role="group" aria-label="Amount">
+        <button type="button" data-amt="50">$50</button>
+        <button type="button" data-amt="100" aria-pressed="true">$100</button>
+        <button type="button" data-amt="250">$250</button>
+        <button type="button" data-amt="1000">$1,000</button>
+      </div>
+      <label class="custom"><span>$</span><input id="custom-amt" type="number" min="1" step="1" inputmode="numeric" placeholder="Other amount" aria-label="Other amount"></label>
+      <div class="impact" id="impact"></div>
+      <a class="btn" id="give-btn" href="#give" aria-describedby="give-note">Give $100 by card or PayPal</a>
+      <p class="hero-fine" id="give-note">Opens IRDF's PayPal checkout. PayPal keeps 2.9% + 30¢; everything else reaches the schools. <span class="todo">to confirm: button link and fee</span></p>
+    </div>
+    <div class="ways">
+      <div class="way"><div class="k">Check</div><div><p>Payable to <strong>India Rural Development Fund</strong>. Include your email so we can send a receipt.</p>
+        <div class="addr" id="addr">India Rural Development Fund<br>633 Festivo Ct, Fremont, CA 94539</div><button class="copy" type="button" data-copy="addr">Copy</button> <span class="todo">to confirm address</span></div></div>
+      <div class="way"><div class="k">Match</div><div><p>Many employers double gifts. IRDF is listed on Benevity and most matching portals under EIN <strong>94-3274500</strong>. Ask HR, or send us the form.</p></div></div>
+      <div class="way"><div class="k">Stock</div><div><p>Give appreciated shares and avoid the capital gains tax. Email us for the brokerage transfer details.</p></div></div>
+      <div class="way"><div class="k">DAF</div><div><p>From a donor-advised fund, search for India Rural Development Fund, Fremont, CA, or use the EIN.</p></div></div>
+      <div class="way"><div class="k">Wire</div><div><p>For large gifts or from outside the US. Email us for wire instructions.</p></div></div>
+      <div class="way"><div class="k">India</div><div><p>If you pay tax in India, give directly to RDF for an 80G receipt: <a href="https://www.rdfindia.org/donate">rdfindia.org/donate</a>.</p></div></div>
+      <div class="way"><div class="k">Will</div><div><p>Remember IRDF in your will or as a life-insurance beneficiary. Tell us, so we can thank you.</p></div></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="board"><div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">Who runs it</p>
+    <h2>A volunteer board, since 1996.</h2>
+    <p class="lede">No one at IRDF is paid. The board is listed on the latest IRS filing. <span class="todo">to confirm the 2026 board</span></p>
+  </div>
+  <div class="board">
+    <div class="person"><b>Kruthika Katragadda</b><span>President</span></div>
+    <div class="person"><b>Sunil Erraballi</b><span>Secretary and Treasurer</span></div>
+    <div class="person"><b>Srisha Rao</b><span>Board member</span></div>
+    <div class="person"><b>Andrew Flachs</b><span>Director</span></div>
+    <div class="person"><b>Glenn Davis Stone</b><span>Board member</span></div>
+  </div>
+  <div class="trust">
+    <div><b>Tax-exempt</b>501(c)(3) public charity, ruling year 1998. EIN 94-3274500. Organized under California's Nonprofit Public Benefit Corporation Law.</div>
+    <div><b>Filings</b>Every Form 990 since 2000 on <a href="https://projects.propublica.org/nonprofits/organizations/943274500">ProPublica</a> and <a href="https://www.guidestar.org/Profile/94-3274500">Candid/GuideStar</a>.</div>
+    <div><b>Partner</b><a href="https://www.rdfindia.org">Rural Development Foundation</a>, Hyderabad. Washington University in St. Louis ran its Village India program at the Kalleda junior college.</div>
+    <div><b>Recognition</b>Resolution of the New Jersey General Assembly honoring IRDF. BBC coverage of the Kalleda students' photoblog, 2007.</div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <div>
+    <b>India Rural Development Fund</b><br>
+    633 Festivo Ct, Fremont, CA 94539<br>
+    <span id="email" style="user-select:all">info@indiarural.org</span><button class="copy" type="button" data-copy="email">Copy</button><br>
+    <span>IRDF is secular and non-partisan. Nothing here is tax advice; please ask your own advisor.</span>
+  </div>
+  <div>
+    <b>Rural Development Foundation</b><br>
+    Khairatabad, Hyderabad 500004, Telangana, India<br>
+    <a href="https://www.rdfindia.org">rdfindia.org</a> · <a href="https://www.instagram.com/rdf_india/">Instagram</a> · <a href="https://www.youtube.com/rdfindiamedia">YouTube</a><br>
+    <span class="te">కలిసి నేర్చుకుందాం, కలిసి ఎదుగుదాం.</span> <span>Together we learn, together we grow.</span>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  const $ = (s, el=document) => el.querySelector(s);
+  const fmt = n => '$' + Math.round(n).toLocaleString('en-US');
+  const fmtK = n => n >= 1000 ? '$' + Math.round(n/1000) + 'k' : fmt(n);
+
+  /* ---------- schools ---------- */
+  function renderSchools(d){
+    const box = $('#schools-list');
+    box.innerHTML = d.institutions.map(s => `
+      <article class="school">
+        <h3>${s.name}</h3>
+        <div class="where">${s.village} village, ${s.mandal} mandal, ${s.district} district</div>
+        <dl>
+          <dt>Since</dt><dd class="num">${s.established}</dd>
+          <dt>Classes</dt><dd>${s.classes}</dd>
+          <dt>Students</dt><dd class="num">${s.students.toLocaleString('en-US')}</dd>
+          <dt>Staff</dt><dd class="num">${s.staff}</dd>
+        </dl>
+        <p>${s.blurb}</p>
+      </article>`).join('');
+  }
+
+  /* ---------- ledger + chart ---------- */
+  function renderLedger(d){
+    const ys = d.years;
+    const tb = $('#ledger tbody'), tf = $('#ledger tfoot');
+    let r=0, s=0;
+    tb.innerHTML = ys.slice().reverse().map(y => {
+      r += y.raised; s += y.spent;
+      return `<tr><td>${y.year}</td><td class="num">${fmt(y.raised)}</td><td class="num">${fmt(y.spent)}</td><td><a href="${y.filing}">990-EZ</a></td></tr>`;
+    }).join('');
+    tf.innerHTML = `<tr><td>${ys[0].year}–${ys[ys.length-1].year}</td><td class="num">${fmt(r)}</td><td class="num">${fmt(s)}</td><td></td></tr>`;
+    $('#stat-sent').textContent = fmtK(s);
+    $('#stat-sent-label').textContent = `sent to the schools since ${ys[0].year}`;
+    drawChart(ys);
+  }
+
+  function drawChart(ys){
+    const svg = $('#chart-svg');
+    const W=640, H=300, padL=52, padR=10, padT=18, padB=34;
+    const max = Math.max(...ys.map(y=>Math.max(y.raised,y.spent)));
+    const step = max > 100000 ? 50000 : 25000;
+    const top = Math.ceil(max/step)*step;
+    const x = i => padL + i*((W-padL-padR)/ys.length);
+    const bw = (W-padL-padR)/ys.length;
+    const y = v => padT + (H-padT-padB) * (1 - v/top);
+    let out = '';
+    for(let v=0; v<=top; v+=step){
+      out += `<line x1="${padL}" x2="${W-padR}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="1"/>`;
+      out += `<text x="${padL-6}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${v===0?'0':'$'+(v/1000)+'k'}</text>`;
+    }
+    const barW = Math.min(14, bw*0.34), gap = 2;
+    ys.forEach((d,i)=>{
+      const cx = x(i)+bw/2;
+      const bars = [['raised',d.raised,'var(--chart-raised)'],['spent',d.spent,'var(--chart-sent)']];
+      bars.forEach(([k,v,c],j)=>{
+        const bx = cx - barW - gap/2 + j*(barW+gap);
+        const h = Math.max(0, y(0)-y(v));
+        const r = Math.min(4, h);
+        out += `<path d="M${bx},${y(0)} v${-(h-r)} a${r},${r} 0 0 1 ${r},${-r} h${barW-2*r} a${r},${r} 0 0 1 ${r},${r} v${h-r} z" fill="${c}"/>`;
+      });
+      out += `<rect class="hit" data-i="${i}" x="${x(i)}" y="${padT}" width="${bw}" height="${H-padT-padB}" fill="transparent" style="cursor:pointer"/>`;
+      out += `<text x="${cx}" y="${H-padB+16}" text-anchor="middle" font-size="11" fill="var(--muted)">${i%2===0 || ys.length<10 ? String(d.year).slice(2) : ''}</text>`;
+    });
+    const last = ys[ys.length-1];
+    out += `<text x="${x(ys.length-1)+bw/2}" y="${y(last.raised)-6}" text-anchor="middle" font-size="11" font-weight="600" fill="var(--fg)">${fmtK(last.raised)}</text>`;
+    out += `<line x1="${padL}" x2="${W-padR}" y1="${y(0)}" y2="${y(0)}" stroke="var(--muted)" stroke-width="1"/>`;
+    svg.innerHTML = svg.innerHTML.replace(/<\/title>[\s\S]*$/, '</title>') + out;
+    const tip = $('#chart-tip');
+    const show = i => { const d=ys[i]; tip.innerHTML = `<b>${d.year}</b> · raised <b class="num">${fmt(d.raised)}</b> · sent to RDF <b class="num">${fmt(d.spent)}</b>`; };
+    svg.querySelectorAll('.hit').forEach(h=>{
+      h.addEventListener('mouseenter', ()=>show(+h.dataset.i));
+      h.addEventListener('click', ()=>show(+h.dataset.i));
+      h.addEventListener('focus', ()=>show(+h.dataset.i));
+    });
+  }
+
+  /* ---------- giver ---------- */
+  const state = { amt: 100, monthly: false };
+  const impactFor = a => {
+    // Rough equivalents. To confirm with RDF: per-student annual cost and teacher salary.
+    if (a >= 1000) return ['A year of school for about ' + Math.round(a/250) + ' children', 'fees, meals, books and uniforms'];
+    if (a >= 250)  return ['A full year for one child', 'fees, meals, books and uniforms'];
+    if (a >= 100)  return ['A term of mid-day meals for a class', 'rice, dal and vegetables from the school garden'];
+    return ['Books and a uniform for one child', 'the uniform is what erases caste and class in the classroom'];
+  };
+  function paint(){
+    const a = state.amt;
+    const [big, small] = impactFor(state.monthly ? a*12 : a);
+    $('#impact').innerHTML = `<b>${big}</b><span>${small} <span class="todo">to confirm equivalents with RDF</span></span>`;
+    $('#give-btn').textContent = `Give ${fmt(a)}${state.monthly?' a month':''} by card or PayPal`;
+    document.querySelectorAll('.amounts button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.amt===a && !$('#custom-amt').value)));
+  }
+  document.querySelectorAll('.amounts button').forEach(b => b.addEventListener('click', ()=>{ state.amt=+b.dataset.amt; $('#custom-amt').value=''; paint(); }));
+  $('#custom-amt').addEventListener('input', e => { const v=+e.target.value; if(v>0){ state.amt=v; } paint(); });
+  $('#freq-once').addEventListener('click', ()=>{ state.monthly=false; $('#freq-once').setAttribute('aria-pressed','true'); $('#freq-monthly').setAttribute('aria-pressed','false'); paint(); });
+  $('#freq-monthly').addEventListener('click', ()=>{ state.monthly=true; $('#freq-once').setAttribute('aria-pressed','false'); $('#freq-monthly').setAttribute('aria-pressed','true'); paint(); });
+  $('#give-btn').addEventListener('click', e => { e.preventDefault(); $('#give-note').innerHTML = 'This button will open PayPal checkout once IRDF\'s button link is added. For now, use one of the other ways on the right. <span class="todo">to confirm</span>'; });
+  paint();
+
+  /* ---------- copy buttons ---------- */
+  document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', ()=>{
+    const el = document.getElementById(b.dataset.copy);
+    const text = el.innerText.replace(/\n+/g, '\n');
+    const done = ()=>{ b.textContent='Copied'; setTimeout(()=>b.textContent='Copy',1500); };
+    try { navigator.clipboard.writeText(text).then(done).catch(()=>{ selectIt(el); }); } catch(e){ selectIt(el); }
+  }));
+  function selectIt(el){ const r=document.createRange(); r.selectNodeContents(el); const s=window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+
+  /* ---------- data ---------- */
+  const inline = window.IRDF_DATA;
+  if (inline) { renderSchools(inline.schools); renderLedger(inline.ledger); }
+  else {
+    fetch('data/schools.json').then(r=>r.json()).then(renderSchools).catch(()=>{ $('#schools-list').innerHTML='<p class="lede">School list could not be loaded.</p>'; });
+    fetch('data/ledger.json').then(r=>r.json()).then(renderLedger).catch(()=>{ $('#chart-tip').textContent='Figures could not be loaded.'; });
+  }
+})();
+</script>
+</body>
+</html>

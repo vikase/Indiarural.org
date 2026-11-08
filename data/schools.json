@@ -1,0 +1,37 @@
+{
+  "note": "Student and staff counts from rdfindia.org/our-institutions (2025-26). Update once a year from RDF.",
+  "source": "https://www.rdfindia.org/our-institutions",
+  "totals": { "students": 2824, "staff": 246, "institutions": 5, "students_1996": 80, "staff_1996": 10 },
+  "institutions": [
+    {
+      "name": "RDF Kalleda",
+      "village": "Kalleda", "mandal": "Parvatagiri", "district": "Warangal",
+      "established": 1996, "classes": "LKG – 10th", "students": 776, "staff": 63,
+      "blurb": "The first school. It opened with 80 children in a portion of the Erraballi family home and is still RDF's flagship, where new programs are piloted. Its students have represented India in archery and won the state science fair."
+    },
+    {
+      "name": "RDF Matendla",
+      "village": "Matendla", "mandal": "Narayanraopet", "district": "Siddipet",
+      "established": 1998, "classes": "LKG – 10th", "students": 840, "staff": 68,
+      "blurb": "Began under the trees in a village that had no school at all. Now the largest RDF school, with science and computer labs, a dining hall, a school bus and its own water plant."
+    },
+    {
+      "name": "RDF Redlawada",
+      "village": "Redlawada", "mandal": "Nekkonda", "district": "Warangal",
+      "established": 2005, "classes": "LKG – 10th", "students": 301, "staff": 31,
+      "blurb": "Telugu-medium primary school with English from grade one. Its organic garden supplies vegetables for the mid-day meal here and at other RDF schools."
+    },
+    {
+      "name": "RDF Rollakal",
+      "village": "Rollakal", "mandal": "Parvatagiri", "district": "Warangal",
+      "established": 2006, "classes": "LKG – 10th", "students": 617, "staff": 46,
+      "blurb": "Classes started in an open field. Infor employees funded and painted the building, inaugurated in 2013. Two fourth-graders were selected for the state sports school in 2019."
+    },
+    {
+      "name": "RDF Vanitha Achuta Pai Junior College",
+      "village": "Kalleda", "mandal": "Parvatagiri", "district": "Warangal",
+      "established": 2007, "classes": "Grades 11–12 (MPC, BPC, CEC)", "students": 290, "staff": 38,
+      "blurb": "English-medium junior college with day and residential places, known for archery and for sending students to the national Inspire science program. Washington University students have taught mini-courses here since 2007."
+    }
+  ]
+}
