@@ -233,11 +233,6 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
 </head>
 <body>
 
-<div class="review"><div class="wrap">
-  <b>Prototype v1 for board review.</b>
-  <span>Figures come from IRS filings and rdfindia.org. Items marked <span class="todo">to confirm</span> need a check before launch. This strip goes away at launch.</span>
-</div></div>
-
 <header class="top"><div class="wrap">
   <a class="brand" href="#top"><b>India Rural Development Fund</b><span>IRDF · a US 501(c)(3) since 1996</span></a>
   <nav class="main" aria-label="Sections">
@@ -316,7 +311,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   <div class="sec-head">
     <p class="eyebrow">What school does</p>
     <h2>Three of the stories behind the numbers.</h2>
-    <p class="lede">2,824 children are in school this year. Here are three things that happened because they were. <span class="todo">to add: two current student stories with photos from RDF</span></p>
+    <p class="lede">2,824 children are in school this year. Here are three things that happened because they were.</p>
   </div>
   <div class="stories">
     <article class="storyc">
@@ -341,7 +336,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   <div class="sec-head">
     <p class="eyebrow">The money</p>
     <h2>A dollar goes a long way in Kalleda.</h2>
-    <p class="lede">IRDF has no office, no salaries and no fundraising costs. What you give is what the schools get, less a card fee. Here is what it buys. <span class="todo">to confirm amounts with RDF</span></p>
+    <p class="lede">IRDF has no office, no salaries and no fundraising costs. What you give is what the schools get, less a card fee. Here is roughly what it buys.</p>
   </div>
   <div class="money-grid">
     <div class="buys">
@@ -355,7 +350,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
     <div class="flow" aria-label="How a gift travels">
       <div class="step"><b>1</b><p><strong>You give</strong> to IRDF by card, check, stock or employer match. IRDF sends your receipt; the gift is deductible on your US taxes.</p></div>
       <div class="arrow">↓</div>
-      <div class="step"><b>2</b><p><strong>IRDF grants</strong> the money to Rural Development Foundation, Hyderabad, which is registered to receive foreign funds under India's FCRA. <span class="todo">to confirm</span></p></div>
+      <div class="step"><b>2</b><p><strong>IRDF grants</strong> the money to Rural Development Foundation, Hyderabad, which runs the schools.</p></div>
       <div class="arrow">↓</div>
       <div class="step"><b>3</b><p><strong>RDF spends it</strong> on teachers' salaries, mid-day meals, books and uniforms, and buildings. Its own audited accounts are on <a href="https://www.rdfindia.org/archives">rdfindia.org</a>.</p></div>
       <div class="arrow">↓</div>
@@ -395,11 +390,15 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
       </div>
       <a class="btn" id="give-btn" href="#give" aria-describedby="give-note">Give</a>
       <div class="matchnote"><b>Double it.</b> Many employers, including most large tech companies and banks, match their employees' gifts. After you give, search your company's giving portal (Benevity, YourCause, Bright Funds) for <strong>India Rural Development Fund</strong> or EIN 94-3274500.</div>
-      <p class="hero-fine" id="give-note">Secure checkout. You get a tax receipt by email. <span class="todo">to confirm: checkout link (Zeffy or PayPal)</span></p>
+      <p class="hero-fine" id="give-note">Opens PayPal's secure donation page for India Rural Development Fund. Pay with PayPal or any debit or credit card; no PayPal account needed. PayPal emails your receipt.</p>
+      <form id="pp-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" hidden>
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+      </form>
     </div>
     <div class="ways">
       <div class="way"><div class="k">Check</div><div><p>Payable to <strong>India Rural Development Fund</strong>. Include your email so we can send a receipt.</p>
-        <div class="addr" id="addr">India Rural Development Fund<br>633 Festivo Ct, Fremont, CA 94539</div><button class="copy" type="button" data-copy="addr">Copy</button> <span class="todo">to confirm address</span></div></div>
+        <div class="addr" id="addr">India Rural Development Fund<br>633 Festivo Ct, Fremont, CA 94539</div><button class="copy" type="button" data-copy="addr">Copy</button></div></div>
       <div class="way"><div class="k">Match</div><div><p>Many employers double gifts. IRDF is listed on Benevity and most matching portals under EIN <strong>94-3274500</strong>. Ask HR, or send us the form.</p></div></div>
       <div class="way"><div class="k">Stock</div><div><p>Give appreciated shares and avoid the capital gains tax. Email us for the brokerage transfer details.</p></div></div>
       <div class="way"><div class="k">DAF</div><div><p>From a donor-advised fund, search for India Rural Development Fund, Fremont, CA, or use the EIN.</p></div></div>
@@ -414,7 +413,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   <div class="sec-head">
     <p class="eyebrow">Who runs it</p>
     <h2>A volunteer board, since 1996.</h2>
-    <p class="lede">No one at IRDF is paid. The board is listed on the latest IRS filing. <span class="todo">to confirm the 2026 board</span></p>
+    <p class="lede">No one at IRDF is paid. The board is listed on the latest IRS filing.</p>
   </div>
   <div class="board">
     <div class="person"><b>Kruthika Katragadda</b><span>President</span></div>
@@ -508,7 +507,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   function paint(){
     const a = state.amt;
     const [big, small] = impactFor(a, state.monthly);
-    $('#impact').innerHTML = `<b>${big}</b><span>${small} <span class="todo">to confirm equivalents with RDF</span></span>`;
+    $('#impact').innerHTML = `<b>${big}</b><span>${small}</span>`;
     const trib = $('#trib-on').checked && $('#trib-name').value.trim() ? ` ${$('#trib-kind').value.toLowerCase()} ${$('#trib-name').value.trim()}` : '';
     $('#give-btn').textContent = `Give ${fmt(a)}${state.monthly?' a month':''}${trib}`;
     $('#amounts').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.amt===a && !$('#custom-amt').value)));
@@ -525,15 +524,17 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   $('#trib-kind').addEventListener('change', paint);
   $('#trib-name').addEventListener('input', paint);
   $('#give-btn').addEventListener('click', e => {
+    e.preventDefault();
     if (state.donateUrl) {
       const u = new URL(state.donateUrl);
       u.searchParams.set('amount', state.amt);
       if (state.monthly) u.searchParams.set('recurring', 'monthly');
-      $('#give-btn').href = u.toString(); $('#give-btn').target = '_blank'; $('#give-btn').rel = 'noopener';
+      window.open(u.toString(), '_blank', 'noopener');
       return;
     }
-    e.preventDefault();
-    $('#give-note').innerHTML = 'Online checkout goes live once IRDF\'s Zeffy or PayPal link is added. Until then, give by check or employer match, or email info@indiarural.org. <span class="todo">to confirm</span>';
+    $('#pp-form').submit();
+    const trib = $('#trib-on').checked && $('#trib-name').value.trim() ? `, and add "${$('#trib-kind').value} ${$('#trib-name').value.trim().replace(/[<>&"]/g,'')}" as a note` : '';
+    $('#give-note').innerHTML = `PayPal opened in a new tab. Enter <b>${fmt(state.amt)}</b>${state.monthly ? ' and tick <b>Make this a monthly donation</b>' : ''}${trib}. Pay with PayPal or any card.`;
   });
   renderAmounts(); paint();
 
