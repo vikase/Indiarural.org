@@ -13,4 +13,4 @@ Static site. No build step. GitHub Pages serves `main` from the root.
 
 - Remove the review strip at the top of `index.html` and resolve every `to confirm` mark.
 - Add the PayPal button link to `#give-btn`.
-- Add the file `CNAME` with the line `indiarural.org`, then change the DNS records: A records for the apex to GitHub Pages, CNAME `www` → `vikase.github.io`. Do not touch the MX records.
+- Domain: indiarural.org (CNAME file). DNS at Network Solutions: four A records for @ to GitHub Pages, CNAME www → vikase.github.io. MX (Google mail) untouched.
