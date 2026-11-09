@@ -178,6 +178,8 @@ nav.main .btn{padding:.55rem .95rem;font-size:.9rem}
 .board{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.8rem 1.5rem}
 .person b{display:block;font-family:var(--display);font-weight:700;font-size:1.05rem}
 .person span{font-size:.85rem;color:var(--muted)}
+.person p{font-size:.9rem;margin-top:.4rem;max-width:46ch}
+.board{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem 2rem}
 .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
 .trust div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;font-size:.92rem;display:grid;gap:.3rem}
 .trust div b{font-family:var(--display);font-weight:700}
@@ -223,6 +225,14 @@ nav.main .btn{padding:.55rem .95rem;font-size:.9rem}
 @media (max-width:560px){.signup{grid-template-columns:1fr}}
 .signup-msg{font-size:.9rem;min-height:1.3em;margin-top:.5rem}
 
+/* contact */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;display:grid;gap:.35rem;align-content:start;justify-items:start}
+.contact-card b{font-family:var(--display);font-weight:700;color:var(--leaf);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.contact-card a#c-email{font-family:var(--display);font-weight:700;font-size:1.15rem}
+.contact-card p{font-size:.88rem;color:var(--muted)}
+.contact-card .copy{margin-left:0}
+
 /* footer */
 footer{border-top:1px solid var(--line);padding-block:2.5rem;font-size:.9rem;color:var(--muted)}
 footer .wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
@@ -236,7 +246,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
 <header class="top"><div class="wrap">
   <a class="brand" href="#top"><b>India Rural Development Fund</b><span>IRDF · a US 501(c)(3) since 1996</span></a>
   <nav class="main" aria-label="Sections">
-    <a href="#story">Story</a><a href="#schools">Schools</a><a href="#money">What a gift buys</a><a href="#letters">Letters</a>
+    <a href="#story">Story</a><a href="#schools">Schools</a><a href="#money">What a gift buys</a><a href="#board">Board</a><a href="#contact">Contact</a>
     <a class="btn" href="#give">Give</a>
   </nav>
 </div></header>
@@ -289,9 +299,9 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
       <li><b>1998</b><span>Matendla school starts under the trees in Siddipet district, a village with no school.</span></li>
       <li><b>2003</b><span>Kalleda reaches 560 students, kindergarten to 10th. Community hall opens in Redlawada.</span></li>
       <li><b>2004</b><span>First graduating class. Every student passes the state board exam.</span></li>
-      <li><b>2006</b><span>Pranitta Vardhineni and Adonda Raju win silver and bronze for India at the junior world archery championship in Mexico.</span></li>
+      <li><b>2006</b><span>Pranitha Vardhineni and Adonda Raju win silver and bronze for India at the junior world archery championship in Mexico.</span></li>
       <li><b>2007</b><span>The BBC's most-read Asia story is the Kalleda kids' photoblog. The junior college opens. Washington University begins Village India.</span></li>
-      <li><b>2008</b><span>Pranitta shoots for India at the Beijing Olympics.</span></li>
+      <li><b>2008</b><span>Pranitha shoots for India at the Beijing Olympics.</span></li>
       <li><b>2013</b><span>Rollakal gets a building, funded and painted by Infor employees.</span></li>
       <li><b>2026</b><span>2,824 students, 246 staff, five institutions.</span></li>
     </ol>
@@ -317,7 +327,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
     <article class="storyc">
       <div class="k">2008</div>
       <h3>From Kalleda to the Beijing Olympics</h3>
-      <p>Pranitta Vardhineni learned archery at the Kalleda school. In 2006 she won silver for India at the junior world championships in Mexico; in 2008 she shot for India at the Beijing Olympics. Her schoolmate Adonda Raju took bronze in Mexico.</p>
+      <p>Pranitha Vardhineni learned archery at the Kalleda school. In 2006 she won silver for India at the junior world championships in Mexico; in 2008 she shot for India at the Beijing Olympics. Her schoolmate Adonda Raju took bronze in Mexico.</p>
     </article>
     <article class="storyc">
       <div class="k">1998</div>
@@ -400,11 +410,11 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
       <div class="way"><div class="k">Check</div><div><p>Payable to <strong>India Rural Development Fund</strong>. Include your email so we can send a receipt.</p>
         <div class="addr" id="addr">India Rural Development Fund<br>633 Festivo Ct, Fremont, CA 94539</div><button class="copy" type="button" data-copy="addr">Copy</button></div></div>
       <div class="way"><div class="k">Match</div><div><p>Many employers double gifts. IRDF is listed on Benevity and most matching portals under EIN <strong>94-3274500</strong>. Ask HR, or send us the form.</p></div></div>
-      <div class="way"><div class="k">Stock</div><div><p>Give appreciated shares and avoid the capital gains tax. Email us for the brokerage transfer details.</p></div></div>
+      <div class="way"><div class="k">Stock</div><div><p>Give appreciated shares and avoid the capital gains tax. <a href="mailto:info@indiarural.org?subject=Gift%20of%20stock%20to%20IRDF">Email us</a> for the brokerage transfer details.</p></div></div>
       <div class="way"><div class="k">DAF</div><div><p>From a donor-advised fund, search for India Rural Development Fund, Fremont, CA, or use the EIN.</p></div></div>
-      <div class="way"><div class="k">Wire</div><div><p>For large gifts or from outside the US. Email us for wire instructions.</p></div></div>
+      <div class="way"><div class="k">Wire</div><div><p>For large gifts or from outside the US. <a href="mailto:info@indiarural.org?subject=Wire%20instructions%20for%20IRDF">Email us</a> for wire instructions.</p></div></div>
       <div class="way"><div class="k">India</div><div><p>If you pay tax in India, give directly to RDF for an 80G receipt: <a href="https://www.rdfindia.org/donate">rdfindia.org/donate</a>.</p></div></div>
-      <div class="way"><div class="k">Will</div><div><p>Remember IRDF in your will or as a life-insurance beneficiary. Tell us, so we can thank you.</p></div></div>
+      <div class="way"><div class="k">Will</div><div><p>Remember IRDF in your will or as a life-insurance beneficiary. <a href="#contact">Tell us</a>, so we can thank you.</p></div></div>
     </div>
   </div>
 </div></section>
@@ -416,11 +426,11 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
     <p class="lede">No one at IRDF is paid. The board is listed on the latest IRS filing.</p>
   </div>
   <div class="board">
-    <div class="person"><b>Kruthika Katragadda</b><span>President</span></div>
-    <div class="person"><b>Sunil Erraballi</b><span>Secretary and Treasurer</span></div>
-    <div class="person"><b>Srisha Rao</b><span>Board member</span></div>
-    <div class="person"><b>Andrew Flachs</b><span>Director</span></div>
-    <div class="person"><b>Glenn Davis Stone</b><span>Board member</span></div>
+    <div class="person"><b>Kruthika Katragadda</b><span>President</span><p>Attorney qualified in New York, England &amp; Wales and India. Formerly a corporate solicitor in London and a judicial clerk at the Supreme Court of India and the UN Administrative Tribunal in Geneva. LL.M., Georgetown.</p></div>
+    <div class="person"><b>Sunil Erraballi</b><span>Secretary and Treasurer</span><p>Past president of IRDF. Founded and ran Frontier Technology in Fremont, California, and was a charter member and past president of the bio-pharma network EPPIC. Osmania University; MBA, XLRI.</p></div>
+    <div class="person"><b>Andrew Flachs, PhD</b><span>Director</span><p>Professor of anthropology at Purdue University. Taught English and journalism at the RDF schools from 2012 to 2015 and has published research on organic cotton and small farms in Telangana. Speaks Telugu.</p></div>
+    <div class="person"><b>Glenn Davis Stone, PhD</b><span>Board member</span><p>Anthropologist who has studied cotton farmers in Warangal since 2000, long at Washington University in St. Louis, where he started the Village India program at the Kalleda junior college. Stays at the schools on his research trips.</p></div>
+    <div class="person"><b>Srisha Rao, MD</b><span>Board member</span><p>Cardiologist and internist in Ocala, Florida. Gandhi Medical College, Hyderabad; cardiology fellowship in New York.</p></div>
   </div>
   <div class="trust">
     <div><b>Tax-exempt</b>501(c)(3) public charity, ruling year 1998. EIN 94-3274500. Organized under California's Nonprofit Public Benefit Corporation Law.</div>
@@ -444,6 +454,19 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
     </div>
     <p class="signup-msg" id="su-msg" role="status"></p>
   </form>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="sec-head">
+    <p class="eyebrow">Contact</p>
+    <h2>Questions, a visit, or a gift that needs paperwork.</h2>
+    <p class="lede">IRDF is run by volunteers. We read every email and reply within a few days.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card"><b>Email</b><a href="mailto:info@indiarural.org" id="c-email">info@indiarural.org</a><button class="copy" type="button" data-copy="c-email">Copy</button><p>For receipts, stock and wire transfers, employer matching forms, and anything else.</p></div>
+    <div class="contact-card"><b>Mail a check</b><span id="c-addr">India Rural Development Fund<br>633 Festivo Ct<br>Fremont, CA 94539</span><button class="copy" type="button" data-copy="c-addr">Copy</button><p>Payable to India Rural Development Fund. EIN 94-3274500.</p></div>
+    <div class="contact-card"><b>The schools in India</b><span>Rural Development Foundation<br>Khairatabad, Hyderabad 500004</span><p><a href="https://www.rdfindia.org">rdfindia.org</a> · headoffice@rdfindia.org. To volunteer or visit a school, write to RDF.</p></div>
+  </div>
 </div></section>
 
 </main>
