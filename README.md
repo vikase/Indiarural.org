@@ -14,3 +14,11 @@ Static site. No build step. GitHub Pages serves `main` from the root.
 - Remove the review strip at the top of `index.html` and resolve every `to confirm` mark.
 - Add the PayPal button link to `#give-btn`.
 - Domain: indiarural.org (CNAME file). DNS at Network Solutions: four A records for @ to GitHub Pages, CNAME www → vikase.github.io. MX (Google mail) untouched.
+
+## Rules from the board (Sunil Erraballi, Nov 11, 2026)
+
+- Use "donation" or "give". Do not use "gift".
+- Do not centre the site on Kalleda. RDF runs five institutions. Mention Kalleda only as a fact of history.
+- Do not show the Kalleda house photo. The school moved to its own campus.
+- RDF is a separate legal entity. RDF is not a subsidiary of IRDF. Do not list the RDF address or the RDF email as an IRDF contact.
+- Wire instructions can go on the page. The page shows "Email us" until the treasurer sends the bank details.
