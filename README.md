@@ -22,4 +22,5 @@ Static site. No build step. GitHub Pages serves `main` from the root.
 - Do not show the Kalleda house photo. The school moved to its own campus.
 - RDF is a separate legal entity. RDF is not a subsidiary of IRDF. Do not list the RDF address or the RDF email as an IRDF contact.
 - The NJ General Assembly resolution is docs/NJassemblyResolution.pdf. It came from the old site through the Wayback Machine (capture of Feb 13, 2015).
+- An archive of the old site (266 files, rebuilt from the Wayback Machine on Nov 11, 2026) is the zip on the branch `old-site-archive`. Do not merge that branch into main. A pointer note is in Drive: 07 Family & Events / indiarural.org archive (old site, Nov 2026).
 - Wire instructions can go on the page. The page shows "Email us" until the treasurer sends the bank details.
