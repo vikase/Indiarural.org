@@ -21,4 +21,5 @@ Static site. No build step. GitHub Pages serves `main` from the root.
 - Do not centre the site on Kalleda. RDF runs five institutions. Mention Kalleda only as a fact of history.
 - Do not show the Kalleda house photo. The school moved to its own campus.
 - RDF is a separate legal entity. RDF is not a subsidiary of IRDF. Do not list the RDF address or the RDF email as an IRDF contact.
+- The NJ General Assembly resolution is docs/NJassemblyResolution.pdf. It came from the old site through the Wayback Machine (capture of Feb 13, 2015).
 - Wire instructions can go on the page. The page shows "Email us" until the treasurer sends the bank details.
