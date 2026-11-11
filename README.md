@@ -7,7 +7,7 @@ Static site. No build step. GitHub Pages serves `main` from the root.
 - `index.html` — the whole site, one page.
 - `data/ledger.json` — raised, sent and held by year, from IRS Form 990-EZ (ProPublica). Kept for reference; the page no longer shows it (board decision, Nov 2026).
 - `data/schools.json` — the five institutions and their counts, from rdfindia.org. Update once a year.
-- `img/` — Kalleda house photo and the link-preview card (`share.jpg`, 1200 × 630).
+- `img/` — the link-preview card (`share.jpg`, 1200 × 630). No hero photo for now: the Kalleda house photo was removed in Nov 2026 because the school moved to its own campus. Add campus photos here when RDF sends them.
 
 ## Before launch
 

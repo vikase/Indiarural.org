@@ -16,8 +16,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Albert+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+Telugu:wght@500&display=swap">
 <style>
 /* Layout: one long page, a sticky nav rail, whitewash ground with laterite and tamarind.
-   Palette comes from the Kalleda house photo: chuna whitewash, red-oxide window hoods,
-   tamarind leaf, the laterite yard, one bougainvillea. */
+   Palette: chuna whitewash, red oxide, tamarind leaf, laterite, one bougainvillea. */
 :root{
   --bg:#f6f7f4;           /* whitewash */
   --surface:#ffffff;
@@ -92,8 +91,10 @@ nav.main .btn{padding:.55rem .95rem;font-size:.9rem}
 /* hero */
 .hero{padding-block:clamp(1.5rem,4vw,3rem) 0}
 .hero-grid>*,.story-grid>*,.money-grid>*,.give-grid>*,footer .wrap>*{min-width:0}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,4vw,3rem);align-items:end}
-@media (max-width:860px){.hero-grid{grid-template-columns:1fr}}
+/* No photo for now: the hero is one column. When RDF sends campus photos, add a <figure class="hero-photo"> and restore two columns. */
+.hero-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.5rem,4vw,3rem);align-items:end}
+.hero-copy{max-width:54rem}
+.hero{padding-bottom:clamp(1.5rem,4vw,3rem)!important}
 .hero-copy{display:grid;gap:1.2rem;padding-bottom:1rem}
 .hero-copy .lede{color:var(--fg)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
@@ -181,7 +182,7 @@ nav.main .btn{padding:.55rem .95rem;font-size:.9rem}
 .person p{font-size:.9rem;margin-top:.4rem;max-width:46ch}
 .board{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem 2rem}
 .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
-.trust div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;font-size:.92rem;display:grid;gap:.3rem}
+.trust div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;font-size:.92rem;display:grid;gap:.3rem;align-content:start}
 .trust div b{font-family:var(--display);font-weight:700}
 
 /* campaign */
@@ -246,7 +247,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
 <header class="top"><div class="wrap">
   <a class="brand" href="#top"><b>India Rural Development Fund</b><span>IRDF · a US 501(c)(3) since 1996</span></a>
   <nav class="main" aria-label="Sections">
-    <a href="#story">Story</a><a href="#schools">Schools</a><a href="#money">What a gift buys</a><a href="#board">Board</a><a href="#contact">Contact</a>
+    <a href="#story">Story</a><a href="#schools">Schools</a><a href="#money">What a donation buys</a><a href="#board">Board</a><a href="#contact">Contact</a>
     <a class="btn" href="#give">Give</a>
   </nav>
 </div></header>
@@ -255,31 +256,27 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
 
 <div class="camp" id="camp" hidden><div class="wrap">
   <div><b id="camp-title">Fund 10 teachers for 2027</b> <span id="camp-meta"></span></div>
-  <a href="#give">Give before Dec 31 →</a>
+  <a href="#give" id="camp-link">Give by Dec 31 →</a>
 </div></div>
 
 <section class="hero"><div class="wrap hero-grid">
   <div class="hero-copy">
-    <p class="eyebrow">Kalleda, Warangal district, Telangana</p>
+    <p class="eyebrow">Rural Telangana, India · since 1996</p>
     <h1>Good schools for village children in rural Telangana.</h1>
-    <p class="lede">In 1996, eighty children in Kalleda village started school with ten teachers. Today the Rural Development Foundation runs four schools and a junior college for <span class="mark num">2,824 students</span>, half of them girls. IRDF is the American charity that helps pay for it, with no paid staff and nothing taken off the top.</p>
+    <p class="lede">In 1996, eighty children in one Telangana village started school with ten teachers. Today the Rural Development Foundation runs four schools and a junior college for <span class="mark num">2,824 students</span>, half of them girls. IRDF is the American charity that helps pay for it, with no paid staff and nothing taken off the top.</p>
     <div class="hero-cta">
       <a class="btn" href="#give">Give to the schools</a>
-      <a class="btn ghost" href="#money">See what a gift buys</a>
+      <a class="btn ghost" href="#money">See what a donation buys</a>
     </div>
     <p class="hero-fine">Tax-deductible in the US · EIN 94-3274500 · Every officer is a volunteer</p>
   </div>
-  <figure class="hero-photo">
-    <img src="img/kalleda.jpg" srcset="img/kalleda-800.jpg 800w, img/kalleda.jpg 1400w" sizes="(max-width:860px) 100vw, 50vw" alt="The whitewashed Kalleda Rural School building, seen through a tamarind tree with a bougainvillea in bloom and a playground slide in the yard" width="1400" height="957">
-    <figcaption><span>Kalleda Rural School, since 1996</span><span class="te">కల్లెడ</span></figcaption>
-  </figure>
 </div></section>
 
 <div class="band"><div class="wrap">
   <div class="stat"><b class="num">2,824</b><span>students this year, up from 80 in 1996</span></div>
   <div class="stat"><b class="num">5</b><span>institutions: four schools and a junior college</span></div>
   <div class="stat"><b class="num">246</b><span>teachers and staff, employed in the villages</span></div>
-  <div class="stat"><b class="num">0</b><span>paid staff at IRDF; every gift goes to the schools</span></div>
+  <div class="stat"><b class="num">0</b><span>paid staff at IRDF; every donation goes to the schools</span></div>
 </div></div>
 
 <section id="story"><div class="wrap">
@@ -326,7 +323,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   <div class="stories">
     <article class="storyc">
       <div class="k">2008</div>
-      <h3>From Kalleda to the Beijing Olympics</h3>
+      <h3>From a village school to the Beijing Olympics</h3>
       <p>Pranitha Vardhineni learned archery at the Kalleda school. In 2006 she won silver for India at the junior world championships in Mexico; in 2008 she shot for India at the Beijing Olympics. Her schoolmate Adonda Raju took bronze in Mexico.</p>
     </article>
     <article class="storyc">
@@ -345,7 +342,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
 <section id="money"><div class="wrap">
   <div class="sec-head">
     <p class="eyebrow">The money</p>
-    <h2>A dollar goes a long way in Kalleda.</h2>
+    <h2>A dollar goes a long way in rural Telangana.</h2>
     <p class="lede">IRDF has no office, no salaries and no fundraising costs. What you give is what the schools get, less a card fee. Here is roughly what it buys.</p>
   </div>
   <div class="money-grid">
@@ -357,8 +354,8 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
       <div class="buy"><b class="num">$10,000</b><p>A science lab, a library or a school bus.</p></div>
       <div class="buy"><b class="num">$25,000</b><p>A new classroom block.</p></div>
     </div>
-    <div class="flow" aria-label="How a gift travels">
-      <div class="step"><b>1</b><p><strong>You give</strong> to IRDF by card, check, stock or employer match. IRDF sends your receipt; the gift is deductible on your US taxes.</p></div>
+    <div class="flow" aria-label="How a donation travels">
+      <div class="step"><b>1</b><p><strong>You give</strong> to IRDF by card, check, stock or employer match. IRDF sends your receipt; your donation is deductible on your US taxes.</p></div>
       <div class="arrow">↓</div>
       <div class="step"><b>2</b><p><strong>IRDF grants</strong> the money to Rural Development Foundation, Hyderabad, which runs the schools.</p></div>
       <div class="arrow">↓</div>
@@ -373,22 +370,22 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   <div class="sec-head">
     <p class="eyebrow">Give</p>
     <h2>Pay a teacher. Feed a class. Keep a girl in school.</h2>
-    <p class="lede">Every gift goes to the schools. Pick an amount, or give the way your accountant prefers.</p>
+    <p class="lede">Every donation goes to the schools. Pick an amount, or give the way your accountant prefers.</p>
   </div>
   <div class="goal" id="goal" hidden>
     <div class="goal-top"><h3 id="goal-title">Fund 10 teachers for 2027</h3><span class="meta" id="goal-meta"></span></div>
     <div class="bar" id="goal-bar" hidden><i id="goal-fill"></i></div>
     <div class="teachers" id="goal-teachers" aria-label="Teachers funded so far"></div>
-    <p class="meta" id="goal-note">$3,000 pays one teacher for a school year. A monthly gift of $250 funds a teacher on its own.</p>
+    <p class="meta" id="goal-note">$3,000 pays one teacher for a school year. A monthly donation of $250 funds a teacher on its own.</p>
   </div>
   <div class="give-grid">
     <div class="giver" id="giver">
-      <div class="seg" role="group" aria-label="Gift frequency">
+      <div class="seg" role="group" aria-label="Donation frequency">
         <button type="button" id="freq-monthly" aria-pressed="true">Monthly</button>
         <button type="button" id="freq-once" aria-pressed="false">One time</button>
       </div>
       <div class="amounts" role="group" aria-label="Amount" id="amounts"></div>
-      <p class="amounts-hint" id="amounts-hint">Monthly gifts let the schools plan a whole year of salaries. Cancel any time.</p>
+      <p class="amounts-hint" id="amounts-hint">Monthly donations let the schools plan a whole year of salaries. Cancel any time.</p>
       <label class="custom"><span>$</span><input id="custom-amt" type="number" min="1" step="1" inputmode="numeric" placeholder="Other amount" aria-label="Other amount"></label>
       <div class="impact" id="impact"></div>
       <div class="tribute">
@@ -399,7 +396,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
         </div>
       </div>
       <a class="btn" id="give-btn" href="#give" aria-describedby="give-note">Give</a>
-      <div class="matchnote"><b>Double it.</b> Many employers, including most large tech companies and banks, match their employees' gifts. After you give, search your company's giving portal (Benevity, YourCause, Bright Funds) for <strong>India Rural Development Fund</strong> or EIN 94-3274500.</div>
+      <div class="matchnote"><b>Double it.</b> Many employers, including most large tech companies and banks, match their employees' donations. After you give, search your company's giving portal (Benevity, YourCause, Bright Funds) for <strong>India Rural Development Fund</strong> or EIN 94-3274500.</div>
       <p class="hero-fine" id="give-note">Opens PayPal's secure donation page for India Rural Development Fund. Pay with PayPal or any debit or credit card; no PayPal account needed. PayPal emails your receipt.</p>
       <form id="pp-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" hidden>
         <input type="hidden" name="cmd" value="_s-xclick">
@@ -409,10 +406,10 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
     <div class="ways">
       <div class="way"><div class="k">Check</div><div><p>Payable to <strong>India Rural Development Fund</strong>. Include your email so we can send a receipt.</p>
         <div class="addr" id="addr">India Rural Development Fund<br>633 Festivo Ct, Fremont, CA 94539</div><button class="copy" type="button" data-copy="addr">Copy</button></div></div>
-      <div class="way"><div class="k">Match</div><div><p>Many employers double gifts. IRDF is listed on Benevity and most matching portals under EIN <strong>94-3274500</strong>. Ask HR, or send us the form.</p></div></div>
-      <div class="way"><div class="k">Stock</div><div><p>Give appreciated shares and avoid the capital gains tax. <a href="mailto:info@indiarural.org?subject=Gift%20of%20stock%20to%20IRDF">Email us</a> for the brokerage transfer details.</p></div></div>
+      <div class="way"><div class="k">Match</div><div><p>Many employers double donations. IRDF is listed on Benevity and most matching portals under EIN <strong>94-3274500</strong>. Ask HR, or send us the form.</p></div></div>
+      <div class="way"><div class="k">Stock</div><div><p>Give appreciated shares and avoid the capital gains tax. <a href="mailto:info@indiarural.org?subject=Donation%20of%20stock%20to%20IRDF">Email us</a> for the brokerage transfer details.</p></div></div>
       <div class="way"><div class="k">DAF</div><div><p>From a donor-advised fund, search for India Rural Development Fund, Fremont, CA, or use the EIN.</p></div></div>
-      <div class="way"><div class="k">Wire</div><div><p>For large gifts or from outside the US. <a href="mailto:info@indiarural.org?subject=Wire%20instructions%20for%20IRDF">Email us</a> for wire instructions.</p></div></div>
+      <div class="way"><div class="k">Wire</div><div><p>For large donations or from outside the US. <a href="mailto:info@indiarural.org?subject=Wire%20instructions%20for%20IRDF">Email us</a> for wire instructions.</p></div></div>
       <div class="way"><div class="k">India</div><div><p>If you pay tax in India, give directly to RDF for an 80G receipt: <a href="https://www.rdfindia.org/donate">rdfindia.org/donate</a>.</p></div></div>
       <div class="way"><div class="k">Will</div><div><p>Remember IRDF in your will or as a life-insurance beneficiary. <a href="#contact">Tell us</a>, so we can thank you.</p></div></div>
     </div>
@@ -433,18 +430,18 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
     <div class="person"><b>Srisha Rao, MD</b><span>Board member</span><p>Cardiologist and internist in Ocala, Florida. Gandhi Medical College, Hyderabad; cardiology fellowship in New York.</p></div>
   </div>
   <div class="trust">
-    <div><b>Tax-exempt</b>501(c)(3) public charity, ruling year 1998. EIN 94-3274500. Organized under California's Nonprofit Public Benefit Corporation Law.</div>
-    <div><b>Filings</b>IRDF files a Form 990-EZ every year. Every return since 2000 is on <a href="https://projects.propublica.org/nonprofits/organizations/943274500">ProPublica</a> and <a href="https://www.guidestar.org/Profile/94-3274500">Candid/GuideStar</a>.</div>
-    <div><b>Partner</b><a href="https://www.rdfindia.org">Rural Development Foundation</a>, Hyderabad. Washington University in St. Louis ran its Village India program at the Kalleda junior college.</div>
-    <div><b>Recognition</b>Resolution of the New Jersey General Assembly honoring IRDF. BBC coverage of the Kalleda students' photoblog, 2007.</div>
+    <div><b>Tax-exempt</b><p>501(c)(3) public charity, ruling year 1998. EIN 94-3274500. Organized under California's Nonprofit Public Benefit Corporation Law.</p></div>
+    <div><b>Filings</b><p>IRDF files a Form 990-EZ every year. Every return since 2000 is on <a href="https://projects.propublica.org/nonprofits/organizations/943274500">ProPublica</a> and <a href="https://www.guidestar.org/Profile/94-3274500">Candid/GuideStar</a>.</p></div>
+    <div><b>Partner</b><p>IRDF makes grants to the <a href="https://www.rdfindia.org">Rural Development Foundation</a>, an independent nonprofit in Hyderabad that runs the schools. Washington University in St. Louis ran its Village India program at the RDF junior college.</p></div>
+    <div><b>Recognition</b><p>Resolution of the New Jersey General Assembly honoring IRDF. <a href="https://news.bbc.co.uk/2/hi/6332511.stm">BBC News coverage</a> of the students' <a href="https://www.flickr.com/photos/kalledaphotoproject/">photoblog</a>, 2007.</p></div>
   </div>
 </div></section>
 
 <section id="letters"><div class="wrap signup-grid">
   <div class="sec-head" style="margin:0">
-    <p class="eyebrow">Letters from Kalleda</p>
-    <h2>Four short letters a year from the schools.</h2>
-    <p class="lede" style="color:var(--fg)">A student's story, a photo from the classroom, and what your gifts paid for that term. No spam, and one click to leave.</p>
+    <p class="eyebrow">Letters from the schools</p>
+    <h2>Four short letters a year.</h2>
+    <p class="lede" style="color:var(--fg)">A student's story, a photo from the classroom, and what your donations paid for that term. No spam, and one click to leave.</p>
   </div>
   <form id="signup-form" novalidate>
     <div class="signup">
@@ -459,13 +456,12 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
 <section id="contact"><div class="wrap">
   <div class="sec-head">
     <p class="eyebrow">Contact</p>
-    <h2>Questions, a visit, or a gift that needs paperwork.</h2>
+    <h2>Questions, or a donation that needs paperwork.</h2>
     <p class="lede">IRDF is run by volunteers. We read every email and reply within a few days.</p>
   </div>
   <div class="contact-grid">
     <div class="contact-card"><b>Email</b><a href="mailto:info@indiarural.org" id="c-email">info@indiarural.org</a><button class="copy" type="button" data-copy="c-email">Copy</button><p>For receipts, stock and wire transfers, employer matching forms, and anything else.</p></div>
     <div class="contact-card"><b>Mail a check</b><span id="c-addr">India Rural Development Fund<br>633 Festivo Ct<br>Fremont, CA 94539</span><button class="copy" type="button" data-copy="c-addr">Copy</button><p>Payable to India Rural Development Fund. EIN 94-3274500.</p></div>
-    <div class="contact-card"><b>The schools in India</b><span>Rural Development Foundation<br>Khairatabad, Hyderabad 500004</span><p><a href="https://www.rdfindia.org">rdfindia.org</a> · headoffice@rdfindia.org. To volunteer or visit a school, write to RDF.</p></div>
   </div>
 </div></section>
 
@@ -479,10 +475,8 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
     <span>IRDF is secular and non-partisan. Nothing here is tax advice; please ask your own advisor.</span>
   </div>
   <div>
-    <b>Rural Development Foundation</b><br>
-    Khairatabad, Hyderabad 500004, Telangana, India<br>
-    <a href="https://www.rdfindia.org">rdfindia.org</a> · <a href="https://www.instagram.com/rdf_india/">Instagram</a> · <a href="https://www.youtube.com/rdfindiamedia">YouTube</a><br>
-    <span class="te">కలిసి నేర్చుకుందాం, కలిసి ఎదుగుదాం.</span> <span>Together we learn, together we grow.</span>
+    <span>The schools are run by the Rural Development Foundation, an independent nonprofit registered in India. IRDF supports it with grants; the two are separate legal entities.</span><br>
+    <a href="https://www.rdfindia.org">rdfindia.org</a> · <a href="https://www.instagram.com/rdf_india/">Instagram</a> · <a href="https://www.youtube.com/rdfindiamedia">YouTube</a>
   </div>
 </div></footer>
 
@@ -566,17 +560,22 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
     if (!c || !c.active) return;
     state.donateUrl = c.donate_url || '';
     state.signup = c.signup_endpoint || '';
-    const end = new Date(c.ends + 'T23:59:59');
-    const days = Math.ceil((end - new Date()) / 86400000);
+    // Calendar days from today to the end date, both at local midnight.
+    const now = new Date(), today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const end = new Date(c.ends + 'T00:00:00');
+    const days = Math.round((end - today) / 86400000);
     if (days < 0) return;
+    const md = d => d.toLocaleDateString('en-US', {month:'short', day:'numeric'});
+    const endLabel = `${md(end)}, ${end.getFullYear()}`;
     const units = Math.floor((c.raised||0) / c.unit_cost);
     const target = Math.round(c.goal / c.unit_cost);
-    const gt = new Date(c.giving_tuesday + 'T23:59:59');
-    const gtDays = Math.ceil((gt - new Date()) / 86400000);
-    const when = gtDays > 0 ? `Giving Tuesday is Dec 1 · ${days} days to Dec 31` : `${days} day${days===1?'':'s'} left`;
+    const gt = new Date(c.giving_tuesday + 'T00:00:00');
+    const left = days === 0 ? `last day: ${endLabel}` : `${days} day${days===1?'':'s'} left, to ${endLabel}`;
+    const when = gt > today ? `Giving Tuesday is ${md(gt)} · ${left}` : left;
     const progress = c.raised > 0 ? `${fmt(c.raised)} of ${fmt(c.goal)} from ${c.donors} donor${c.donors===1?'':'s'} · ` : `Goal ${fmt(c.goal)} · `;
     $('#camp-title').textContent = c.title;
     $('#camp-meta').textContent = progress + when;
+    $('#camp-link').textContent = `Give by ${endLabel} →`;
     $('#camp').hidden = false;
     $('#goal-title').textContent = c.title;
     $('#goal-meta').textContent = progress + when;
@@ -596,7 +595,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
         .then(()=>{ msg.textContent = `Thank you${name?', '+name:''}. The first letter comes after the next school term.`; e.target.reset(); })
         .catch(()=>{ msg.textContent = 'That did not go through. Please email info@indiarural.org and we will add you.'; });
     } else {
-      const sub = encodeURIComponent('Sign me up for Letters from Kalleda');
+      const sub = encodeURIComponent('Sign me up for letters from the IRDF schools');
       const body = encodeURIComponent(`Please add me to the IRDF mailing list.\n\nName: ${name}\nEmail: ${email}`);
       location.href = `mailto:info@indiarural.org?subject=${sub}&body=${body}`;
       msg.textContent = 'Your email app should open with a short note to IRDF. Send it and we will add you.';
