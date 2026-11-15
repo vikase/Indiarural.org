@@ -18,6 +18,8 @@ Static site. No build step. GitHub Pages serves `main` from the root.
 ## Rules from the board (Sunil Erraballi, Nov 11, 2026)
 
 - Use "donation" or "give". Do not use "gift".
+- Hero and share card (Sunil, Nov 14-15, 2026): the tagline is "Give a rural child a chance to dream." Say "India" in the hero, the headings and the share text. Do not name Telangana or Kalleda there. The Schools section gives each location.
+- The campaign title names the year of the appeal (2026), not the school year that the money pays for. The banner and the goal box hide by themselves after the `ends` date in data/campaign.json. For the next appeal, change the title and the dates in that file.
 - Do not centre the site on Kalleda. RDF runs five institutions. Mention Kalleda only as a fact of history.
 - Do not show the Kalleda house photo. The school moved to its own campus.
 - RDF is a separate legal entity. RDF is not a subsidiary of IRDF. Do not list the RDF address or the RDF email as an IRDF contact.
