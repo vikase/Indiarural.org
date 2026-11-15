@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="claude:viewport-fit-sides" content="cover">
 <title>India Rural Development Fund</title>
-<meta name="description" content="IRDF is a volunteer-run US 501(c)(3) that funds the Rural Development Foundation's five schools in rural India. 2,824 students, no paid staff.">
+<meta name="description" content="IRDF is a volunteer-run US 501(c)(3) that helps fund five schools in rural India. 2,824 students, no paid staff.">
 <meta property="og:title" content="India Rural Development Fund">
 <meta property="og:description" content="Give a rural child a chance to dream. Schools for 2,800 children in rural India, since 1996. A volunteer-run US charity with no paid staff.">
 <meta property="og:image" content="https://indiarural.org/img/share.jpg">
@@ -263,7 +263,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
   <div class="hero-copy">
     <p class="eyebrow">India · since 1996</p>
     <h1>Give a rural child a chance to dream.</h1>
-    <p class="lede">In 1996, eighty children in one village started school with ten teachers. Today the Rural Development Foundation runs four schools and a junior college for <span class="mark num">2,824 students</span>, half of them girls. IRDF is the American charity that helps pay for it, with no paid staff and nothing taken off the top.</p>
+    <p class="lede">In 1996, eighty children in one village started school with ten teachers. Today <span class="mark num">2,824 students</span>, half of them girls, study in four village schools and a junior college. IRDF is the American charity that helps pay for them, with no paid staff and nothing taken off the top.</p>
     <div class="hero-cta">
       <a class="btn" href="#give">Give to the schools</a>
       <a class="btn ghost" href="#money">See what a donation buys</a>
@@ -597,7 +597,7 @@ footer .te{font-family:var(--telugu);color:var(--fg)}
         .then(()=>{ msg.textContent = `Thank you${name?', '+name:''}. The first letter comes after the next school term.`; e.target.reset(); })
         .catch(()=>{ msg.textContent = 'That did not go through. Please email info@indiarural.org and we will add you.'; });
     } else {
-      const sub = encodeURIComponent('Sign me up for letters from the IRDF schools');
+      const sub = encodeURIComponent('Sign me up for letters from IRDF');
       const body = encodeURIComponent(`Please add me to the IRDF mailing list.\n\nName: ${name}\nEmail: ${email}`);
       location.href = `mailto:info@indiarural.org?subject=${sub}&body=${body}`;
       msg.textContent = 'Your email app should open with a short note to IRDF. Send it and we will add you.';
